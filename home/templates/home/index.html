@@ -1,0 +1,3421 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}home{% endblock %}
+{% block content %}
+<!-- تبلیغ بالای صفحه -->
+<div id="top-banner" class="bg-gradient-to-r from-primary-600 to-secondary-500 py-2 relative">
+    <div class="container">
+        <div class="flex items-center justify-between">
+            <a href="#" class="flex items-center justify-center w-full">
+                <!-- ارتفاع ثابت 32px در موبایل و 48px در دسکتاپ -->
+                <div class="h-10 md:h-12 w-full">
+                    <img src="{% static 'assets/images/top.jpg' %}"
+                         alt="تخفیف ویژه نوروزی - تا ۵۰٪ تخفیف"
+                         class="w-full h-full object-cover rounded-lg shadow-lg">
+                </div>            </a>
+        </div>
+    </div>
+</div>
+
+<!-- STORY SECTION -->
+<section class="py-5">
+    <h2 class="sr-only">استوری های فروشگاه</h2>
+    <!-- for seo -->
+    <div class="container">
+        <div id="stories-container" role="region" aria-labelledby="stories-title">
+            <h3 id="stories-title" class="sr-only">استوری های فروشگاه</h3>
+            <!-- title for screen readers -->
+        </div>
+    </div>
+</section>
+<!-- END STORY SECTION -->
+
+<!-- SLIDER SECTION -->
+<section class="py-5">
+    <h2 class="sr-only">اسلایدر فروشگاه </h2>
+    <!-- for seo -->
+    <div class="container">
+        <!-- Main slider -->
+        <div class="w-full overflow-hidden">
+            <div class="swiper max-w-[1920px] mx-auto !relative default-carousel swiper-container"
+                 aria-label="اسلایدر فروشگاه">
+                <div class="swiper-wrapper" style="padding-bottom: 0 !important;">
+                    <div class="swiper-slide" role="group" aria-roledescription="slide">
+                        <a href="#" aria-label="تصویر 1 از اسلایدر فروشگاه">
+                            <div class="lg:h-90 h-50 flex justify-center items-center">
+                                <img src="assets/images/slider/landing/laptop-1.webp"
+                                     class="h-full object-cover w-full rounded-lg" loading="lazy"
+                                     alt="تصویر تبلیغاتی اسلایدر فروشگاه - محصول ویژه 1">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" role="group" aria-roledescription="slide">
+                        <a href="#" aria-label="تصویر 2 از اسلایدر فروشگاه">
+                            <div class="lg:h-90 h-50 flex justify-center items-center">
+                                <img src="assets/images/slider/landing/laptop-2.jpg"
+                                     class="h-full object-cover w-full rounded-lg" loading="lazy"
+                                     alt="تصویر تبلیغاتی اسلایدر فروشگاه - محصول ویژه 2">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" role="group" aria-roledescription="slide">
+                        <a href="#" aria-label="تصویر 3 از اسلایدر فروشگاه">
+                            <div class="lg:h-90 h-50 flex justify-center items-center">
+                                <img src="{% static 'assets/images/slider/landing/laptop-3.jpg' %}"
+                                     class="h-full object-cover w-full rounded-lg" loading="lazy"
+                                     alt="تصویر تبلیغاتی اسلایدر فروشگاه - محصول ویژه 3">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- prev button -->
+                <div class="absolute lg:block hidden cursor-pointer custom-swiper-prev top-1/2 -translate-y-1/2 start-0 !z-30">
+                    <svg width="83" height="285" viewBox="0 0 83 285" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.14"
+                              d="M80.0469 7.4043V284.222V251.904C80.0469 236.962 74.4721 222.559 64.4132 211.51L30.6937 174.474C13.323 155.395 13.323 126.231 30.6937 107.152L64.4132 70.116C74.4721 59.0678 80.0469 44.664 80.0469 29.7226V7.4043Z"
+                              fill="black"></path>
+                        <path
+                                d="M82.0469 0.404297V277.222V244.904C82.0469 229.962 76.4721 215.559 66.4132 204.51L32.6937 167.474C15.323 148.395 15.323 119.231 32.6937 100.152L66.4132 63.116C76.4721 52.0678 82.0469 37.664 82.0469 22.7226V0.404297Z"
+                                fill="white"></path>
+                        <path
+                                d="M55.1719 141.413L60.6052 135.98C61.2469 135.338 61.2469 134.288 60.6052 133.646L55.1719 128.213"
+                                stroke="#C3CDDC" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <!-- next button -->
+                <div class="absolute lg:block hidden cursor-pointer  custom-swiper-next top-1/2 -translate-y-1/2 end-0 !z-30">
+                    <svg width="83" height="285" viewBox="0 0 83 285" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.14"
+                              d="M2.80469 7.5332V284.351V252.033C2.80469 237.091 8.37946 222.688 18.4383 211.639L52.1578 174.603C69.5286 155.524 69.5286 126.36 52.1578 107.281L18.4383 70.2449C8.37946 59.1967 2.80469 44.7929 2.80469 29.8515V7.5332Z"
+                              fill="black"></path>
+                        <path
+                                d="M0.804688 0.533203V277.351V245.033C0.804688 230.091 6.37946 215.688 16.4383 204.639L50.1578 167.603C67.5286 148.524 67.5286 119.36 50.1578 100.281L16.4383 63.2449C6.37946 52.1967 0.804688 37.7929 0.804688 22.8515V0.533203Z"
+                                fill="white"></path>
+                        <path
+                                d="M27.6797 141.542L22.2464 136.108C21.6047 135.467 21.6047 134.417 22.2464 133.775L27.6797 128.342"
+                                stroke="#C3CDDC" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <!-- pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END SLIDER SECTION -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="digikala-offer">
+    <div class="offer-header">
+        <div class="section-title">
+            <h2>پیشنهاد شگفت‌انگیز</h2>
+        </div>
+
+        <div class="offer-timer">
+            <span>زمان باقی‌مانده:</span>
+            <div class="timer-numbers">
+                <span class="timer-box" id="hours">۰۲</span>
+                <span>:</span>
+                <span class="timer-box" id="minutes">۴۷</span>
+                <span>:</span>
+                <span class="timer-box" id="seconds">۱۴</span>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="offer-content">
+        <div class="navigation-buttons">
+
+            <button class="nav-button next-button">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </div>
+
+        <div class="offer-banner">
+            <img src="./assets/img/Amazings.png" alt="پیشنهاد ویژه">
+            <div class="banner-title">پیشنهاد شگفت‌انگیز</div>
+            <div class="banner-subtitle">تخفیف‌های ویژه امروز</div>
+        </div>
+
+        <div class="offer-products">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="discount-ribbon">۴۵٪</div>
+                <div class="product-image">
+                    <img src="{% static 'assets/img/cc296e49271eba4ab4bec08690f9ea90e493c359_1754912713.webp' %}" alt="لپ‌تاپ">
+                </div>
+                <div class="product-info">
+                    <div class="product-price">
+                        <span class="price-amount">۱۷,۶۰۰,۰۰۰ تومان</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-value"></div>
+                    </div>
+                    <div class="progress-text">۱۶ باقی مانده</div>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn">افزودن به سبد</button>
+                        <button class="view-product-btn">مشاهده محصول</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="discount-ribbon">۳۰٪</div>
+                <div class="product-image">
+                    <img src="{% static 'assets/img/cover10.png' %}" alt="هدفون">
+                </div>
+                <div class="product-info">
+                    <div class="product-price">
+                        <span class="price-amount">۴,۵۵۰,۰۰۰ تومان</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-value" style="width: 40%"></div>
+                    </div>
+                    <div class="progress-text">۸ باقی مانده</div>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn">افزودن به سبد</button>
+                        <button class="view-product-btn">مشاهده محصول</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="discount-ribbon">۵۰٪</div>
+                <div class="product-image">
+                    <img src="./assets/img/cover4.png" alt="موبایل">
+                </div>
+                <div class="product-info">
+                    <div class="product-price">
+                        <span class="price-amount">۲۲,۵۰۰,۰۰۰ تومان</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-value" style="width: 25%"></div>
+                    </div>
+                    <div class="progress-text">۳ باقی مانده</div>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn">افزودن به سبد</button>
+                        <button class="view-product-btn">مشاهده محصول</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="discount-ribbon">۲۵٪</div>
+                <div class="product-image">
+                    <img src="./assets/img/cover1.png" alt="ماوس">
+                </div>
+                <div class="product-info">
+                    <div class="product-price">
+                        <span class="price-amount">۲,۱۰۰,۰۰۰ تومان</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-value" style="width: 80%"></div>
+                    </div>
+                    <div class="progress-text">۲۱ باقی مانده</div>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn">افزودن به سبد</button>
+                        <button class="view-product-btn">مشاهده محصول</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="discount-ribbon">۳۵٪</div>
+                <div class="product-image">
+                    <img src="./assets/img/symbol-02.png" alt="کیبورد">
+                </div>
+                <div class="product-info">
+                    <div class="product-price">
+                        <span class="price-amount">۳,۳۸۰,۰۰۰ تومان</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-value" style="width: 60%"></div>
+                    </div>
+                    <div class="progress-text">۱۴ باقی مانده</div>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn">افزودن به سبد</button>
+                        <button class="view-product-btn">مشاهده محصول</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<center>
+    <a href="./shop.html">
+    <img src="{% static 'assets/img/15d3d7b1b394bb57701ad754fd546c5e793e6044_1756880430.webp' %}" class="imgcenter">
+</a>
+    </center>
+    <br>
+
+<!-- ================= شروع بخش دسته‌بندی‌های محبوب ================= -->
+<section class="py-5">
+    <div class="container">
+        <div class="popular-categories">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-layer-group"></i> دسته‌بندی‌های محبوب</h2>
+                <a href="./shop.html" class="view-all">مشاهده همه <i class="fas fa-arrow-left"></i></a>
+            </div>
+
+            <div class="categories-grid">
+                <a href="./Product-details.html" class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <span class="category-name">گوشی موبایل</span>
+                </a>
+
+                <a href="./Product-details.html" class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <span class="category-name">کنسول و بازی</span>
+                </a>
+
+                <a href="./Product-details.html" class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <span class="category-name">کتاب و لوازم تحریر</span>
+                </a>
+
+                <a href="./Product-details.html" class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <span class="category-name">آشپزخانه</span>
+                </a>
+
+                <a href="./Product-details.html" class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <span class="category-name">خودرو و موتور</span>
+                </a>
+
+
+                <a href="./Product-details.html" class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <span class="category-name">ابزار و تجهیزات</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================= پایان بخش دسته‌بندی‌های محبوب ================= -->
+
+<!-- ================= شروع بخش محصولات پرفروش ================= -->
+<section class="py-5">
+    <div class="container">
+        <div class="best-sellers">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-crown"></i> پرفروش‌ترین محصولات</h2>
+                <a href="./Product-details.html" class="view-all">مشاهده همه <i class="fas fa-arrow-left"></i></a>
+            </div>
+
+            <div class="products-grid">
+                <!-- محصول 1 -->
+                <div class="product-card">
+                    <span class="product-badge">پرفروش</span>
+                    <div class="product-image">
+                        <img src="{% static 'assets/img/cover1.png' %}" alt="تخفیف‌های ویژه تابستانه">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">گوشی موبایل سامسونگ مدل Galaxy A54 5G دو سیم کارت</h3>
+                        <div class="product-price">
+                            <span class="current-price">۱۵,۹۹۰,۰۰۰ تومان</span>
+                            <span class="original-price">۱۸,۵۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-product="گوشی موبایل سامسونگ">
+                                <i class="fas fa-shopping-cart"></i>
+                                افزودن
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- محصول 2 -->
+                <div class="product-card">
+                    <span class="product-badge">پرفروش</span>
+                    <div class="product-image">
+                        <img src="{% static 'assets/img/cover9.png' %}" alt="تخفیف‌های ویژه تابستانه">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">لپ تاپ ۱۵ اینچی اچ پی Victus 15-FB0107TX Core i7</h3>
+                        <div class="product-price">
+                            <span class="current-price">۴۲,۸۹۰,۰۰۰ تومان</span>
+                            <span class="original-price">۴۶,۹۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-product="لپ تاپ اچ پی">
+                                <i class="fas fa-shopping-cart"></i>
+                                افزودن
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- محصول 3 -->
+                <div class="product-card">
+                    <span class="product-badge">پرفروش</span>
+                    <div class="product-image">
+                        <img src="./assets/img/cover10.png" alt="تخفیف‌های ویژه تابستانه">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">هدفون بلوتوثی مدل Soundcore Life Q20 با نویزکنسلی فعال</h3>
+                        <div class="product-price">
+                            <span class="current-price">۲,۱۹۰,۰۰۰ تومان</span>
+                            <span class="original-price">۲,۸۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-product="هدفون بلوتوثی">
+                                <i class="fas fa-shopping-cart"></i>
+                                افزودن
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- محصول 4 -->
+                <div class="product-card">
+                    <span class="product-badge">پرفروش</span>
+                    <div class="product-image">
+                        <img src="./assets/img/cover4.png" alt="تخفیف‌های ویژه تابستانه">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">ساعت هوشمند اپل مدل Apple Watch Series 8 آلومینیومی</h3>
+                        <div class="product-price">
+                            <span class="current-price">۱۴,۵۰۰,۰۰۰ تومان</span>
+                            <span class="original-price">۱۶,۲۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-product="ساعت هوشمند">
+                                <i class="fas fa-shopping-cart"></i>
+                                افزودن
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- محصول 5 -->
+                <div class="product-card">
+                    <span class="product-badge">پرفروش</span>
+                    <div class="product-image">
+                        <img src="./assets/img/cover1.png" alt="تخفیف‌های ویژه تابستانه">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">کنسول بازی سونی پلی استیشن 5 دیجیتال اdition همراه با یک دسته</h3>
+                        <div class="product-price">
+                            <span class="current-price">۲۳,۹۹۰,۰۰۰ تومان</span>
+                            <span class="original-price">۲۷,۵۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-product="کنسول بازی">
+                                <i class="fas fa-shopping-cart"></i>
+                                افزودن
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================= پایان بخش محصولات پرفروش ================= -->
+<section class="py-55">
+    <div class="container">
+        <div class="special-offers">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-bolt"></i> محبوب ترین برند</h2>
+                <a href="./Product-details.html" class="view-all">مشاهده همه <i class="fas fa-arrow-left"></i></a>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="brand-section-modern-pro-box">
+    <div class="brand-card-modern-pro-box">
+      <img src="{% static 'assets/img/logo/brand1-1.png' %}" alt="LG">
+    </div>
+    <div class="brand-card-modern-pro-box">
+      <img src="{% static 'assets/img/logo/brand1-2.png' %}" alt="Canon">
+    </div>
+    <div class="brand-card-modern-pro-box">
+      <img src="./assets/img/logo/brand1-3.png" alt="Lenovo">
+    </div>
+    <div class="brand-card-modern-pro-box">
+      <img src="./assets/img/logo/brand1-4.png" alt="Apple">
+    </div>
+    <div class="brand-card-modern-pro-box">
+      <img src="./assets/img/logo/brand1-5.png" alt="Samsung">
+    </div>
+    <div class="brand-card-modern-pro-box">
+      <img src="./assets/img/logo/brand1-6.png" alt="Xiaomi">
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+<!-- ================= پایان بخش  ================= -->
+
+<div class="special-offer">
+    <!-- روبان تخفیف -->
+    <div class="special-offer__badge">
+      ۴۸٪ تخفیف
+    </div>
+
+    <!-- محتوای سمت چپ -->
+    <div class="special-offer__content">
+      <h2 class="special-offer__title">ساعت هوشمند هوآوی مدل GT2 Pro 46mm بند سیلیکونی</h2>
+
+      <ul class="special-offer__features">
+        <li class="special-offer__feature-item">ضد آب تا عمق ۵۰ متر</li>
+        <li class="special-offer__feature-item">مجهز به GPS و سنسور ضربان قلب</li>
+      </ul>
+
+      <!-- قیمت -->
+      <div class="special-offer__pricing">
+        <span class="special-offer__current-price">۱,۳۰۰,۰۰۰ تومان</span>
+        <span class="special-offer__original-price">۲,۵۰۰,۰۰۰ تومان</span>
+        <span class="special-offer__savings">صرفه‌جویی ۱,۲۰۰,۰۰۰ تومان</span>
+      </div>
+
+      <!-- شمارش معکوس -->
+      <div class="special-offer__countdown">
+
+        <div class="special-offer__time-unit">
+          <span id="hours">۰۶</span>
+          <small class="special-offer__time-label">ساعت</small>
+        </div>
+        <div class="special-offer__time-unit">
+          <span id="minutes">۲۹</span>
+          <small class="special-offer__time-label">دقیقه</small>
+        </div>
+        <div class="special-offer__time-unit">
+          <span id="seconds">۵۴</span>
+          <small class="special-offer__time-label">ثانیه</small>
+        </div>
+      </div>
+
+      <!-- دکمه خرید -->
+      <a href="#" class="special-offer__cta">همین حالا بخرید</a>
+    </div>
+
+    <!-- تصویر محصول -->
+    <div class="special-offer__image-container">
+      <img src="./assets/img/shop2.webp" alt="ساعت هوشمند هوآوی" class="special-offer__product-image">
+    </div>
+  </div>
+  <br>
+  <br>
+<br>
+
+
+<center>
+<div>
+    <div class="primary-content-wrapper">
+        <div class="visual-media-component">
+            <img src="{% static 'assets/img/advert-1.png' %}" alt="عکس اول">
+            <div class="media-caption-text"></div>
+        </div>
+
+        <div class="visual-media-component">
+            <img src="./assets/img/advert-2.png" alt="عکس دوم">
+            <div class="media-caption-text"></div>
+        </div>
+    </div>
+</div>
+</center>
+<br>
+<br>
+
+<!-- ================= شروع بخش پیشنهادات ویژه ================= -->
+<section class="">
+    <div class="container">
+        <div class="special-offers">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-bolt"></i> پیشنهادات ویژه</h2>
+                <a href="./Product-details.html" class="view-all">مشاهده همه <i class="fas fa-arrow-left"></i></a>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="x98x_container_promo">
+    <a href="./shop.html">
+    <div class="b22b_card_advert" style="background-image: url('./assets/img/439b763258dcff90958e9b9bd0069f67b7cdbc6b_1756269762.webp');">
+    </div></a>
+    <a href="./shop.html">
+    <div class="b22b_card_advert" style="background-image: url('./assets/img/e6592be4039f6402b7b6643dcb04b7aa09fda3a9_1747939316.webp');">
+    </div></a>
+    <a href="./shop.html">
+    <div class="b22b_card_advert" style="background-image: url('./assets/img/Hamidreza-1402.09.05-2.webp');">
+    </div></a>
+    <a href="./shop.html">
+    <div class="b22b_card_advert" style="background-image: url('{% static 'as' %}sets/img/kala.webp');">
+    </div></a>
+  </section>
+  <br>
+  <br>
+
+<!-- ================= پایان بخش پیشنهادات ویژه ================= -->
+
+
+<!-- START LATEST VIEW SECTION -->
+<section class="py-5">
+    <h2 class="sr-only">آخرین مشاهدات کاربر</h2>
+
+    <div class="container">
+
+        <div class="section-header">
+            <h2 class="section-title"><i class="fas fa-layer-group"></i> دسته‌بندی‌های محبوب</h2>
+            <a href="./shop.html" class="view-all">مشاهده همه <i class="fas fa-arrow-left"></i></a>
+        </div>
+
+        <!--items-->
+        <div class="grid grid-cols-12 gap-4 place-items-center">
+
+            <!-- CATEGORY BOX 1 -->
+            <section class="lg:col-span-6 xl:col-span-4 col-span-12 w-full bg-white dark:bg-custom-dark rounded-2xl p-1 drop-shadow dark:shadow-[0_0_15px_rgba(0,0,0,0.6)]">
+
+                <header class="col-span-2 w-full p-3">
+                    <div class="flex items-center justify-between">
+                        <div class="text-start space-y-1">
+                            <h3 class="font-bold text-lg with-highlight dark:text-gray-200">لپتاپ</h3>
+                            <p class="text-xs text-gray-600 dark:text-gray-400">بر اساس سلیقه شما</p>
+                        </div>
+                        <a href="#" class="text-xs font-medium bg-primary text-white py-1.5 px-4 rounded-lg hover:bg-primary/90 active:scale-95 transition duration-200 shadow-sm hover:shadow dark:bg-primary/80 dark:hover:bg-primary/60 dark:text-white">
+                            بیشتر
+                        </a>
+                    </div>
+                </header>
+
+                <div class="grid grid-cols-2 place-items-center product-group-item">
+
+                    <!-- small product card 1 -->
+                    <div class="col-span-1 dark:border-gray-800 group relative flex items-center justify-center h-60 text-center w-full bg-white p-3 py-4 dark:bg-custom-dark">
+                        <div class="relative transition-all duration-200 ease-in-out group">
+
+                            <!-- Product Colors -->
+                            <ul class="absolute top-4 start-3 space-y-1">
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(248, 162, 3);"></li>
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(255, 232, 145);"></li>
+                            </ul>
+
+                            <!-- Thumbnail -->
+                            <div class="text-center flex items-center justify-center overflow-hidden">
+                                <img src="{% static 'assets/images/product/laptop-2.png' %}"
+                                     alt="تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128 گیگابایت"
+                                     loading="lazy"
+                                     class="block h-30 object-contain transition-transform duration-300 group-hover:scale-105">
+                            </div>
+
+                            <!-- Discount Badge -->
+                            <div class="absolute end-3 top-3 bg-secondary-500 text-white text-xs font-bold px-2 py-1 rounded-xl rounded-bl-md shadow shadow-red-500/50 z-10">
+                                3%
+                            </div>
+
+                            <!-- Product Body -->
+                            <div class="mt-3">
+                                <h3 class="font-normal text-xs leading-6 line-clamp-1 mt-2 px-1 overflow-hidden group-hover:text-primary-600 dark:group-hover:text-primary-400 dark:text-gray-200 text-gray-900 transition-colors duration-200">
+                                    <a href="#" class="font-bold">تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128
+                                        گیگابایت</a>
+                                </h3>
+                            </div>
+
+                            <!-- Price + Rating -->
+                            <div class="mt-2 flex justify-between items-end">
+                                <!-- Rating -->
+                                <div class="flex flex-row items-end mt-2">
+                                        <span class="font-bold flex items-center text-xs text-gray-900 dark:text-gray-200 ms-1 mb-1">4
+                                            <span class="text-amber-400 text-xs ms-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                     viewBox="0 0 24 24"><path fill="currentColor"
+                                                                               d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                                            </span>
+                                        </span>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="flex flex-col justify-end min-h-10 h-10">
+                                    <span class="text-xs text-gray-400 dark:text-gray-500 line-through tracking-wider text-left">13,900,000</span>
+                                    <span class="font-bold text-sm text-gray-900 dark:text-gray-200 tracking-wider text-left">13,550,000</span>
+                                </div>
+                            </div>
+
+                            <a class="absolute inset-0 w-full h-full" href="#"></a>
+
+                        </div>
+                    </div>
+
+                    <!-- small product card 2 -->
+                    <div class="col-span-1 dark:border-gray-800 group relative flex items-center justify-center h-60 text-center w-full bg-white p-3 py-4 dark:bg-custom-dark">
+                        <div class="relative transition-all duration-200 ease-in-out group">
+
+                            <!-- Product Colors -->
+                            <ul class="absolute top-4 start-3 space-y-1">
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(248, 162, 3);"></li>
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(255, 232, 145);"></li>
+                            </ul>
+
+                            <!-- Thumbnail -->
+                            <div class="text-center flex items-center justify-center overflow-hidden">
+                                <img src="assets/images/product/laptop-1.png"
+                                     alt="تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128 گیگابایت"
+                                     loading="lazy"
+                                     class="block h-30 object-contain transition-transform duration-300 group-hover:scale-105">
+                            </div>
+
+                            <!-- Discount Badge -->
+                            <div class="absolute end-3 top-3 bg-secondary-500 text-white text-xs font-bold px-2 py-1 rounded-xl rounded-bl-md shadow shadow-red-500/50 z-10">
+                                3%
+                            </div>
+
+                            <!-- Product Body -->
+                            <div class="mt-3">
+                                <h3 class="font-normal text-xs leading-6 line-clamp-1 mt-2 px-1 overflow-hidden group-hover:text-primary-600 dark:group-hover:text-primary-400 dark:text-gray-200 text-gray-900 transition-colors duration-200">
+                                    <a href="#" class="font-bold">تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128
+                                        گیگابایت</a>
+                                </h3>
+                            </div>
+
+                            <!-- Price + Rating -->
+                            <div class="mt-2 flex justify-between items-end">
+                                <!-- Rating -->
+                                <div class="flex flex-row items-end mt-2">
+                                        <span class="font-bold flex items-center text-xs text-gray-900 dark:text-gray-200 ms-1 mb-1">4
+                                            <span class="text-amber-400 text-xs ms-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                     viewBox="0 0 24 24"><path fill="currentColor"
+                                                                               d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                                            </span>
+                                        </span>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="flex flex-col justify-end min-h-10 h-10">
+                                    <span class="text-xs text-gray-400 dark:text-gray-500 line-through tracking-wider text-left">13,900,000</span>
+                                    <span class="font-bold text-sm text-gray-900 dark:text-gray-200 tracking-wider text-left">13,550,000</span>
+                                </div>
+                            </div>
+
+                            <a class="absolute inset-0 w-full h-full" href="#"></a>
+
+                        </div>
+                    </div>
+
+                    <!-- small product card 3 -->
+                    <div class="col-span-1 dark:border-gray-800 group relative flex items-center justify-center h-60 text-center w-full bg-white p-3 py-4 dark:bg-custom-dark">
+                        <div class="relative transition-all duration-200 ease-in-out group">
+
+                            <!-- Product Colors -->
+                            <ul class="absolute top-4 start-3 space-y-1">
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(248, 162, 3);"></li>
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(255, 232, 145);"></li>
+                            </ul>
+
+                            <!-- Thumbnail -->
+                            <div class="text-center flex items-center justify-center overflow-hidden">
+                                <img src="assets/images/product/laptop-3.png"
+                                     alt="تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128 گیگابایت"
+                                     loading="lazy"
+                                     class="block h-30 object-contain transition-transform duration-300 group-hover:scale-105">
+                            </div>
+
+                            <!-- Discount Badge -->
+                            <div class="absolute end-3 top-3 bg-secondary-500 text-white text-xs font-bold px-2 py-1 rounded-xl rounded-bl-md shadow shadow-red-500/50 z-10">
+                                3%
+                            </div>
+
+                            <!-- Product Body -->
+                            <div class="mt-3">
+                                <h3 class="font-normal text-xs leading-6 line-clamp-1 mt-2 px-1 overflow-hidden group-hover:text-primary-600 dark:group-hover:text-primary-400 dark:text-gray-200 text-gray-900 transition-colors duration-200">
+                                    <a href="#" class="font-bold">تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128
+                                        گیگابایت</a>
+                                </h3>
+                            </div>
+
+                            <!-- Price + Rating -->
+                            <div class="mt-2 flex justify-between items-end">
+                                <!-- Rating -->
+                                <div class="flex flex-row items-end mt-2">
+                                        <span class="font-bold flex items-center text-xs text-gray-900 dark:text-gray-200 ms-1 mb-1">4
+                                            <span class="text-amber-400 text-xs ms-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                     viewBox="0 0 24 24"><path fill="currentColor"
+                                                                               d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                                            </span>
+                                        </span>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="flex flex-col justify-end min-h-10 h-10">
+                                    <span class="text-xs text-gray-400 dark:text-gray-500 line-through tracking-wider text-left">13,900,000</span>
+                                    <span class="font-bold text-sm text-gray-900 dark:text-gray-200 tracking-wider text-left">13,550,000</span>
+                                </div>
+                            </div>
+
+                            <a class="absolute inset-0 w-full h-full" href="#"></a>
+
+                        </div>
+                    </div>
+
+                    <!-- small product card 4 -->
+                    <div class="col-span-1 dark:border-gray-800 group relative flex items-center justify-center h-60 text-center w-full bg-white p-3 py-4 dark:bg-custom-dark">
+                        <div class="relative transition-all duration-200 ease-in-out group">
+
+                            <!-- Product Colors -->
+                            <ul class="absolute top-4 start-3 space-y-1">
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(248, 162, 3);"></li>
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(255, 232, 145);"></li>
+                            </ul>
+
+                            <!-- Thumbnail -->
+                            <div class="text-center flex items-center justify-center overflow-hidden">
+                                <img src="assets/images/product/laptop-4.png"
+                                     alt="تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128 گیگابایت"
+                                     loading="lazy"
+                                     class="block h-30 object-contain transition-transform duration-300 group-hover:scale-105">
+                            </div>
+
+                            <!-- Discount Badge -->
+                            <div class="absolute end-3 top-3 bg-secondary-500 text-white text-xs font-bold px-2 py-1 rounded-xl rounded-bl-md shadow shadow-red-500/50 z-10">
+                                3%
+                            </div>
+
+                            <!-- Product Body -->
+                            <div class="mt-3">
+                                <h3 class="font-normal text-xs leading-6 line-clamp-1 mt-2 px-1 overflow-hidden group-hover:text-primary-600 dark:group-hover:text-primary-400 dark:text-gray-200 text-gray-900 transition-colors duration-200">
+                                    <a href="#" class="font-bold">تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128
+                                        گیگابایت</a>
+                                </h3>
+                            </div>
+
+                            <!-- Price + Rating -->
+                            <div class="mt-2 flex justify-between items-end">
+                                <!-- Rating -->
+                                <div class="flex flex-row items-end mt-2">
+                                        <span class="font-bold flex items-center text-xs text-gray-900 dark:text-gray-200 ms-1 mb-1">4
+                                            <span class="text-amber-400 text-xs ms-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                     viewBox="0 0 24 24"><path fill="currentColor"
+                                                                               d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                                            </span>
+                                        </span>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="flex flex-col justify-end min-h-10 h-10">
+                                    <span class="text-xs text-gray-400 dark:text-gray-500 line-through tracking-wider text-left">13,900,000</span>
+                                    <span class="font-bold text-sm text-gray-900 dark:text-gray-200 tracking-wider text-left">13,550,000</span>
+                                </div>
+                            </div>
+
+                            <a class="absolute inset-0 w-full h-full" href="#"></a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- CATEGORY BOX 2 -->
+            <section class="lg:col-span-6 xl:col-span-4 col-span-12 w-full bg-white dark:bg-custom-dark rounded-2xl p-1 drop-shadow dark:shadow-[0_0_15px_rgba(0,0,0,0.6)]">
+
+                <header class="col-span-2 w-full p-3">
+                    <div class="flex items-center justify-between">
+                        <div class="text-start space-y-1">
+                            <h3 class="font-bold text-lg with-highlight dark:text-gray-200">ساعت هوشمند</h3>
+                            <p class="text-xs text-gray-600 dark:text-gray-400">بر اساس سلیقه شما</p>
+                        </div>
+                        <a href="#" class="text-xs font-medium bg-primary text-white py-1.5 px-4 rounded-lg hover:bg-primary/90 active:scale-95 transition duration-200 shadow-sm hover:shadow dark:bg-primary/80 dark:hover:bg-primary/60 dark:text-white">
+                            بیشتر
+                        </a>
+                    </div>
+                </header>
+
+                <div class="grid grid-cols-2 place-items-center product-group-item">
+
+                    <!-- small product card 1 -->
+                    <div class="col-span-1 dark:border-gray-800 group relative flex items-center justify-center h-60 text-center w-full bg-white p-3 py-4 dark:bg-custom-dark">
+                        <div class="relative transition-all duration-200 ease-in-out group">
+
+                            <!-- Product Colors -->
+                            <ul class="absolute top-4 start-3 space-y-1">
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(248, 162, 3);"></li>
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(255, 232, 145);"></li>
+                            </ul>
+
+                            <!-- Thumbnail -->
+                            <div class="text-center flex items-center justify-center overflow-hidden">
+                                <img src="assets/images/product/wach-2.png"
+                                     alt="تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128 گیگابایت"
+                                     loading="lazy"
+                                     class="block h-30 object-contain transition-transform duration-300 group-hover:scale-105">
+                            </div>
+
+                            <!-- Discount Badge -->
+                            <div class="absolute end-3 top-3 bg-secondary-500 text-white text-xs font-bold px-2 py-1 rounded-xl rounded-bl-md shadow shadow-red-500/50 z-10">
+                                3%
+                            </div>
+
+                            <!-- Product Body -->
+                            <div class="mt-3">
+                                <h3 class="font-normal text-xs leading-6 line-clamp-1 mt-2 px-1 overflow-hidden group-hover:text-primary-600 dark:group-hover:text-primary-400 dark:text-gray-200 text-gray-900 transition-colors duration-200">
+                                    <a href="#" class="font-bold">تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128
+                                        گیگابایت</a>
+                                </h3>
+                            </div>
+
+                            <!-- Price + Rating -->
+                            <div class="mt-2 flex justify-between items-end">
+                                <!-- Rating -->
+                                <div class="flex flex-row items-end mt-2">
+                                        <span class="font-bold flex items-center text-xs text-gray-900 dark:text-gray-200 ms-1 mb-1">4
+                                            <span class="text-amber-400 text-xs ms-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                     viewBox="0 0 24 24"><path fill="currentColor"
+                                                                               d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                                            </span>
+                                        </span>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="flex flex-col justify-end min-h-10 h-10">
+                                    <span class="text-xs text-gray-400 dark:text-gray-500 line-through tracking-wider text-left">13,900,000</span>
+                                    <span class="font-bold text-sm text-gray-900 dark:text-gray-200 tracking-wider text-left">13,550,000</span>
+                                </div>
+                            </div>
+
+                            <a class="absolute inset-0 w-full h-full" href="#"></a>
+
+                        </div>
+                    </div>
+
+                    <!-- small product card 2 -->
+                    <div class="col-span-1 dark:border-gray-800 group relative flex items-center justify-center h-60 text-center w-full bg-white p-3 py-4 dark:bg-custom-dark">
+                        <div class="relative transition-all duration-200 ease-in-out group">
+
+                            <!-- Product Colors -->
+                            <ul class="absolute top-4 start-3 space-y-1">
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(248, 162, 3);"></li>
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(255, 232, 145);"></li>
+                            </ul>
+
+                            <!-- Thumbnail -->
+                            <div class="text-center flex items-center justify-center overflow-hidden">
+                                <img src="assets/images/product/wach-1.png"
+                                     alt="تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128 گیگابایت"
+                                     loading="lazy"
+                                     class="block h-30 object-contain transition-transform duration-300 group-hover:scale-105">
+                            </div>
+
+                            <!-- Discount Badge -->
+                            <div class="absolute end-3 top-3 bg-secondary-500 text-white text-xs font-bold px-2 py-1 rounded-xl rounded-bl-md shadow shadow-red-500/50 z-10">
+                                3%
+                            </div>
+
+                            <!-- Product Body -->
+                            <div class="mt-3">
+                                <h3 class="font-normal text-xs leading-6 line-clamp-1 mt-2 px-1 overflow-hidden group-hover:text-primary-600 dark:group-hover:text-primary-400 dark:text-gray-200 text-gray-900 transition-colors duration-200">
+                                    <a href="#" class="font-bold">تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128
+                                        گیگابایت</a>
+                                </h3>
+                            </div>
+
+                            <!-- Price + Rating -->
+                            <div class="mt-2 flex justify-between items-end">
+                                <!-- Rating -->
+                                <div class="flex flex-row items-end mt-2">
+                                        <span class="font-bold flex items-center text-xs text-gray-900 dark:text-gray-200 ms-1 mb-1">4
+                                            <span class="text-amber-400 text-xs ms-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                     viewBox="0 0 24 24"><path fill="currentColor"
+                                                                               d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                                            </span>
+                                        </span>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="flex flex-col justify-end min-h-10 h-10">
+                                    <span class="text-xs text-gray-400 dark:text-gray-500 line-through tracking-wider text-left">13,900,000</span>
+                                    <span class="font-bold text-sm text-gray-900 dark:text-gray-200 tracking-wider text-left">13,550,000</span>
+                                </div>
+                            </div>
+
+                            <a class="absolute inset-0 w-full h-full" href="#"></a>
+
+                        </div>
+                    </div>
+
+                    <!-- small product card 3 -->
+                    <div class="col-span-1 dark:border-gray-800 group relative flex items-center justify-center h-60 text-center w-full bg-white p-3 py-4 dark:bg-custom-dark">
+                        <div class="relative transition-all duration-200 ease-in-out group">
+
+                            <!-- Product Colors -->
+                            <ul class="absolute top-4 start-3 space-y-1">
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(248, 162, 3);"></li>
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(255, 232, 145);"></li>
+                            </ul>
+
+                            <!-- Thumbnail -->
+                            <div class="text-center flex items-center justify-center overflow-hidden">
+                                <img src="assets/images/product/wach-3.png"
+                                     alt="تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128 گیگابایت"
+                                     loading="lazy"
+                                     class="block h-30 object-contain transition-transform duration-300 group-hover:scale-105">
+                            </div>
+
+                            <!-- Discount Badge -->
+                            <div class="absolute end-3 top-3 bg-secondary-500 text-white text-xs font-bold px-2 py-1 rounded-xl rounded-bl-md shadow shadow-red-500/50 z-10">
+                                3%
+                            </div>
+
+                            <!-- Product Body -->
+                            <div class="mt-3">
+                                <h3 class="font-normal text-xs leading-6 line-clamp-1 mt-2 px-1 overflow-hidden group-hover:text-primary-600 dark:group-hover:text-primary-400 dark:text-gray-200 text-gray-900 transition-colors duration-200">
+                                    <a href="#" class="font-bold">تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128
+                                        گیگابایت</a>
+                                </h3>
+                            </div>
+
+                            <!-- Price + Rating -->
+                            <div class="mt-2 flex justify-between items-end">
+                                <!-- Rating -->
+                                <div class="flex flex-row items-end mt-2">
+                                        <span class="font-bold flex items-center text-xs text-gray-900 dark:text-gray-200 ms-1 mb-1">4
+                                            <span class="text-amber-400 text-xs ms-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                     viewBox="0 0 24 24"><path fill="currentColor"
+                                                                               d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                                            </span>
+                                        </span>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="flex flex-col justify-end min-h-10 h-10">
+                                    <span class="text-xs text-gray-400 dark:text-gray-500 line-through tracking-wider text-left">13,900,000</span>
+                                    <span class="font-bold text-sm text-gray-900 dark:text-gray-200 tracking-wider text-left">13,550,000</span>
+                                </div>
+                            </div>
+
+                            <a class="absolute inset-0 w-full h-full" href="#"></a>
+
+                        </div>
+                    </div>
+
+                    <!-- small product card 4 -->
+                    <div class="col-span-1 dark:border-gray-800 group relative flex items-center justify-center h-60 text-center w-full bg-white p-3 py-4 dark:bg-custom-dark">
+                        <div class="relative transition-all duration-200 ease-in-out group">
+
+                            <!-- Product Colors -->
+                            <ul class="absolute top-4 start-3 space-y-1">
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(248, 162, 3);"></li>
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(255, 232, 145);"></li>
+                            </ul>
+
+                            <!-- Thumbnail -->
+                            <div class="text-center flex items-center justify-center overflow-hidden">
+                                <img src="assets/images/product/wach-4.png"
+                                     alt="تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128 گیگابایت"
+                                     loading="lazy"
+                                     class="block h-30 object-contain transition-transform duration-300 group-hover:scale-105">
+                            </div>
+
+                            <!-- Discount Badge -->
+                            <div class="absolute end-3 top-3 bg-secondary-500 text-white text-xs font-bold px-2 py-1 rounded-xl rounded-bl-md shadow shadow-red-500/50 z-10">
+                                3%
+                            </div>
+
+                            <!-- Product Body -->
+                            <div class="mt-3">
+                                <h3 class="font-normal text-xs leading-6 line-clamp-1 mt-2 px-1 overflow-hidden group-hover:text-primary-600 dark:group-hover:text-primary-400 dark:text-gray-200 text-gray-900 transition-colors duration-200">
+                                    <a href="#" class="font-bold">تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128
+                                        گیگابایت</a>
+                                </h3>
+                            </div>
+
+                            <!-- Price + Rating -->
+                            <div class="mt-2 flex justify-between items-end">
+                                <!-- Rating -->
+                                <div class="flex flex-row items-end mt-2">
+                                        <span class="font-bold flex items-center text-xs text-gray-900 dark:text-gray-200 ms-1 mb-1">4
+                                            <span class="text-amber-400 text-xs ms-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                     viewBox="0 0 24 24"><path fill="currentColor"
+                                                                               d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                                            </span>
+                                        </span>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="flex flex-col justify-end min-h-10 h-10">
+                                    <span class="text-xs text-gray-400 dark:text-gray-500 line-through tracking-wider text-left">13,900,000</span>
+                                    <span class="font-bold text-sm text-gray-900 dark:text-gray-200 tracking-wider text-left">13,550,000</span>
+                                </div>
+                            </div>
+
+                            <a class="absolute inset-0 w-full h-full" href="#"></a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- CATEGORY BOX 3 -->
+            <section class="lg:col-span-6 xl:col-span-4 col-span-12 w-full bg-white dark:bg-custom-dark rounded-2xl p-1 drop-shadow dark:shadow-[0_0_15px_rgba(0,0,0,0.6)]">
+
+                <header class="col-span-2 w-full p-3">
+                    <div class="flex items-center justify-between">
+                        <div class="text-start space-y-1">
+                            <h3 class="font-bold text-lg with-highlight dark:text-gray-200">تلفن همراه</h3>
+                            <p class="text-xs text-gray-600 dark:text-gray-400">بر اساس سلیقه شما</p>
+                        </div>
+                        <a href="#" class="text-xs font-medium bg-primary text-white py-1.5 px-4 rounded-lg hover:bg-primary/90 active:scale-95 transition duration-200 shadow-sm hover:shadow dark:bg-primary/80 dark:hover:bg-primary/60 dark:text-white">
+                            بیشتر
+                        </a>
+                    </div>
+                </header>
+
+                <div class="grid grid-cols-2 place-items-center product-group-item">
+
+                    <!-- small product card 1 -->
+                    <div class="col-span-1 dark:border-gray-800 group relative flex items-center justify-center h-60 text-center w-full bg-white p-3 py-4 dark:bg-custom-dark">
+                        <div class="relative transition-all duration-200 ease-in-out group">
+
+                            <!-- Product Colors -->
+                            <ul class="absolute top-4 start-3 space-y-1">
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(248, 162, 3);"></li>
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(255, 232, 145);"></li>
+                            </ul>
+
+                            <!-- Thumbnail -->
+                            <div class="text-center flex items-center justify-center overflow-hidden">
+                                <img src="assets/images/product/television-4.png"
+                                     alt="تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128 گیگابایت"
+                                     loading="lazy"
+                                     class="block h-30 object-contain transition-transform duration-300 group-hover:scale-105">
+                            </div>
+
+                            <!-- Discount Badge -->
+                            <div class="absolute end-3 top-3 bg-secondary-500 text-white text-xs font-bold px-2 py-1 rounded-xl rounded-bl-md shadow shadow-red-500/50 z-10">
+                                3%
+                            </div>
+
+                            <!-- Product Body -->
+                            <div class="mt-3">
+                                <h3 class="font-normal text-xs leading-6 line-clamp-1 mt-2 px-1 overflow-hidden group-hover:text-primary-600 dark:group-hover:text-primary-400 dark:text-gray-200 text-gray-900 transition-colors duration-200">
+                                    <a href="#" class="font-bold">تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128
+                                        گیگابایت</a>
+                                </h3>
+                            </div>
+
+                            <!-- Price + Rating -->
+                            <div class="mt-2 flex justify-between items-end">
+                                <!-- Rating -->
+                                <div class="flex flex-row items-end mt-2">
+                                        <span class="font-bold flex items-center text-xs text-gray-900 dark:text-gray-200 ms-1 mb-1">4
+                                            <span class="text-amber-400 text-xs ms-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                     viewBox="0 0 24 24"><path fill="currentColor"
+                                                                               d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                                            </span>
+                                        </span>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="flex flex-col justify-end min-h-10 h-10">
+                                    <span class="text-xs text-gray-400 dark:text-gray-500 line-through tracking-wider text-left">13,900,000</span>
+                                    <span class="font-bold text-sm text-gray-900 dark:text-gray-200 tracking-wider text-left">13,550,000</span>
+                                </div>
+                            </div>
+
+                            <a class="absolute inset-0 w-full h-full" href="#"></a>
+
+                        </div>
+                    </div>
+
+                    <!-- small product card 2 -->
+                    <div class="col-span-1 dark:border-gray-800 group relative flex items-center justify-center h-60 text-center w-full bg-white p-3 py-4 dark:bg-custom-dark">
+                        <div class="relative transition-all duration-200 ease-in-out group">
+
+                            <!-- Product Colors -->
+                            <ul class="absolute top-4 start-3 space-y-1">
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(248, 162, 3);"></li>
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(255, 232, 145);"></li>
+                            </ul>
+
+                            <!-- Thumbnail -->
+                            <div class="text-center flex items-center justify-center overflow-hidden">
+                                <img src="assets/images/product/laptop-3.png"
+                                     alt="تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128 گیگابایت"
+                                     loading="lazy"
+                                     class="block h-30 object-contain transition-transform duration-300 group-hover:scale-105">
+                            </div>
+
+                            <!-- Discount Badge -->
+                            <div class="absolute end-3 top-3 bg-secondary-500 text-white text-xs font-bold px-2 py-1 rounded-xl rounded-bl-md shadow shadow-red-500/50 z-10">
+                                3%
+                            </div>
+
+                            <!-- Product Body -->
+                            <div class="mt-3">
+                                <h3 class="font-normal text-xs leading-6 line-clamp-1 mt-2 px-1 overflow-hidden group-hover:text-primary-600 dark:group-hover:text-primary-400 dark:text-gray-200 text-gray-900 transition-colors duration-200">
+                                    <a href="#" class="font-bold">تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128
+                                        گیگابایت</a>
+                                </h3>
+                            </div>
+
+                            <!-- Price + Rating -->
+                            <div class="mt-2 flex justify-between items-end">
+                                <!-- Rating -->
+                                <div class="flex flex-row items-end mt-2">
+                                        <span class="font-bold flex items-center text-xs text-gray-900 dark:text-gray-200 ms-1 mb-1">4
+                                            <span class="text-amber-400 text-xs ms-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                     viewBox="0 0 24 24"><path fill="currentColor"
+                                                                               d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                                            </span>
+                                        </span>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="flex flex-col justify-end min-h-10 h-10">
+                                    <span class="text-xs text-gray-400 dark:text-gray-500 line-through tracking-wider text-left">13,900,000</span>
+                                    <span class="font-bold text-sm text-gray-900 dark:text-gray-200 tracking-wider text-left">13,550,000</span>
+                                </div>
+                            </div>
+
+                            <a class="absolute inset-0 w-full h-full" href="#"></a>
+
+                        </div>
+                    </div>
+
+                    <!-- small product card 3 -->
+                    <div class="col-span-1 dark:border-gray-800 group relative flex items-center justify-center h-60 text-center w-full bg-white p-3 py-4 dark:bg-custom-dark">
+                        <div class="relative transition-all duration-200 ease-in-out group">
+
+                            <!-- Product Colors -->
+                            <ul class="absolute top-4 start-3 space-y-1">
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(248, 162, 3);"></li>
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(255, 232, 145);"></li>
+                            </ul>
+
+                            <!-- Thumbnail -->
+                            <div class="text-center flex items-center justify-center overflow-hidden">
+                                <img src="assets/images/product/mobile-3.png"
+                                     alt="تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128 گیگابایت"
+                                     loading="lazy"
+                                     class="block h-30 object-contain transition-transform duration-300 group-hover:scale-105">
+                            </div>
+
+                            <!-- Discount Badge -->
+                            <div class="absolute end-3 top-3 bg-secondary-500 text-white text-xs font-bold px-2 py-1 rounded-xl rounded-bl-md shadow shadow-red-500/50 z-10">
+                                3%
+                            </div>
+
+                            <!-- Product Body -->
+                            <div class="mt-3">
+                                <h3 class="font-normal text-xs leading-6 line-clamp-1 mt-2 px-1 overflow-hidden group-hover:text-primary-600 dark:group-hover:text-primary-400 dark:text-gray-200 text-gray-900 transition-colors duration-200">
+                                    <a href="#" class="font-bold">تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128
+                                        گیگابایت</a>
+                                </h3>
+                            </div>
+
+                            <!-- Price + Rating -->
+                            <div class="mt-2 flex justify-between items-end">
+                                <!-- Rating -->
+                                <div class="flex flex-row items-end mt-2">
+                                        <span class="font-bold flex items-center text-xs text-gray-900 dark:text-gray-200 ms-1 mb-1">4
+                                            <span class="text-amber-400 text-xs ms-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                     viewBox="0 0 24 24"><path fill="currentColor"
+                                                                               d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                                            </span>
+                                        </span>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="flex flex-col justify-end min-h-10 h-10">
+                                    <span class="text-xs text-gray-400 dark:text-gray-500 line-through tracking-wider text-left">13,900,000</span>
+                                    <span class="font-bold text-sm text-gray-900 dark:text-gray-200 tracking-wider text-left">13,550,000</span>
+                                </div>
+                            </div>
+
+                            <a class="absolute inset-0 w-full h-full" href="#"></a>
+
+                        </div>
+                    </div>
+
+                    <!-- small product card 4 -->
+                    <div class="col-span-1 dark:border-gray-800 group relative flex items-center justify-center h-60 text-center w-full bg-white p-3 py-4 dark:bg-custom-dark">
+                        <div class="relative transition-all duration-200 ease-in-out group">
+
+                            <!-- Product Colors -->
+                            <ul class="absolute top-4 start-3 space-y-1">
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(248, 162, 3);"></li>
+                                <li class="w-2.5 h-2.5 rounded-full border border-gray-300 dark:border-gray-600"
+                                    style="background-color: rgb(255, 232, 145);"></li>
+                            </ul>
+
+                            <!-- Thumbnail -->
+                            <div class="text-center flex items-center justify-center overflow-hidden">
+                                <img src="assets/images/product/mobile-4.png"
+                                     alt="تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128 گیگابایت"
+                                     loading="lazy"
+                                     class="block h-30 object-contain transition-transform duration-300 group-hover:scale-105">
+                            </div>
+
+                            <!-- Discount Badge -->
+                            <div class="absolute end-3 top-3 bg-secondary-500 text-white text-xs font-bold px-2 py-1 rounded-xl rounded-bl-md shadow shadow-red-500/50 z-10">
+                                3%
+                            </div>
+
+                            <!-- Product Body -->
+                            <div class="mt-3">
+                                <h3 class="font-normal text-xs leading-6 line-clamp-1 mt-2 px-1 overflow-hidden group-hover:text-primary-600 dark:group-hover:text-primary-400 dark:text-gray-200 text-gray-900 transition-colors duration-200">
+                                    <a href="#" class="font-bold">تبلت سامسونگ مدل Galaxy Tab S8 Ultra ظرفیت 128
+                                        گیگابایت</a>
+                                </h3>
+                            </div>
+
+                            <!-- Price + Rating -->
+                            <div class="mt-2 flex justify-between items-end">
+                                <!-- Rating -->
+                                <div class="flex flex-row items-end mt-2">
+                                        <span class="font-bold flex items-center text-xs text-gray-900 dark:text-gray-200 ms-1 mb-1">4
+                                            <span class="text-amber-400 text-xs ms-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                     viewBox="0 0 24 24"><path fill="currentColor"
+                                                                               d="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z"/></svg>
+                                            </span>
+                                        </span>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="flex flex-col justify-end min-h-10 h-10">
+                                    <span class="text-xs text-gray-400 dark:text-gray-500 line-through tracking-wider text-left">13,900,000</span>
+                                    <span class="font-bold text-sm text-gray-900 dark:text-gray-200 tracking-wider text-left">13,550,000</span>
+                                </div>
+                            </div>
+
+                            <a class="absolute inset-0 w-full h-full" href="#"></a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!-- END LATEST VIEW SECTION -->
+
+
+
+
+
+<!-- START NEW PRODUCT SECTION -->
+<section class="py-5">
+
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title"><i class="fas fa-layer-group"></i> دسته‌بندی‌های محبوب</h2>
+            <a href="./shop.html" class="view-all">مشاهده همه <i class="fas fa-arrow-left"></i></a>
+        </div>        <!-- product items -->
+        <div class="swiper !px-2.3 product-list-carousel">
+            <div class="swiper-wrapper items-center" style="padding-bottom: 0 !important;">
+                <div class="swiper-slide space-y-3 px-1.5 py-2">
+                    <a href="#" class="w-full block">
+                        <article
+                            class="flex py-2 px-3 rounded-xl
+                            bg-white dark:bg-custom-dark
+                            border border-gray-200 dark:border-gray-700
+                            hover:bg-gray-100 dark:hover:bg-[#13171c]
+                            transition-colors duration-200 shadow-sm
+                            items-center justify-between">
+
+                            <section class="w-1/6 border-e-2 border-gray-300 dark:border-neutral-600">
+                                <div class="text-center">
+                                    <span class="font-bold text-3xl text-primary">1</span>
+                                </div>
+                            </section>
+
+                            <section class="w-3/6 space-y-2 ps-3">
+                                <h3 itemprop="name"
+                                    class="font-bold leading-loose line-clamp-2 h-13 text-xs text-gray-900 dark:text-gray-200">
+                                    گوشی موبایل اپل مدل iPhone 13 Pro Max دو سیم کارت
+                                </h3>
+                            </section>
+
+                            <figure class="w-2/6">
+                                <div class="text-end flex justify-end">
+                                    <img src="{% static 'assets/images/product/mobile-1.png' %}" class="size-20" loading="lazy"
+                                         alt="گوشی موبایل اپل مدل iPhone 13 Pro Max">
+                                </div>
+                            </figure>
+
+                        </article>
+                    </a>
+                    <a href="#" class="w-full block">
+                        <article
+                                class="flex py-2 px-3 rounded-xl
+                            bg-white dark:bg-custom-dark
+                            border border-gray-200 dark:border-gray-700
+                            hover:bg-gray-100 dark:hover:bg-[#13171c]
+                            transition-colors duration-200 shadow-sm
+                            items-center justify-between">
+
+                            <section class="w-1/6 border-e-2 border-gray-300 dark:border-neutral-600">
+                                <div class="text-center">
+                                    <span class="font-bold text-3xl text-primary">2</span>
+                                </div>
+                            </section>
+
+                            <section class="w-3/6 space-y-2 ps-3">
+                                <h3 itemprop="name"
+                                    class="font-bold leading-loose line-clamp-2 h-13 text-xs text-gray-900 dark:text-gray-200">
+                                    گوشی موبایل اپل مدل iPhone 13 Pro Max دو سیم کارت
+                                </h3>
+                            </section>
+
+                            <figure class="w-2/6">
+                                <div class="text-end flex justify-end">
+                                    <img src="{% static 'assets/images/product/television-2.png' %}" class="size-20" loading="lazy"
+                                         alt="گوشی موبایل اپل مدل iPhone 13 Pro Max">
+                                </div>
+                            </figure>
+
+                        </article>
+                    </a>
+                    <a href="#" class="w-full block">
+                        <article
+                                class="flex py-2 px-3 rounded-xl
+                            bg-white dark:bg-custom-dark
+                            border border-gray-200 dark:border-gray-700
+                            hover:bg-gray-100 dark:hover:bg-[#13171c]
+                            transition-colors duration-200 shadow-sm
+                            items-center justify-between">
+
+                            <section class="w-1/6 border-e-2 border-gray-300 dark:border-neutral-600">
+                                <div class="text-center">
+                                    <span class="font-bold text-3xl text-primary">3</span>
+                                </div>
+                            </section>
+
+                            <section class="w-3/6 space-y-2 ps-3">
+                                <h3 itemprop="name"
+                                    class="font-bold leading-loose line-clamp-2 h-13 text-xs text-gray-900 dark:text-gray-200">
+                                    گوشی موبایل اپل مدل iPhone 13 Pro Max دو سیم کارت
+                                </h3>
+                            </section>
+
+                            <figure class="w-2/6">
+                                <div class="text-end flex justify-end">
+                                    <img src="assets/images/product/television-1.png" class="size-20" loading="lazy"
+                                         alt="گوشی موبایل اپل مدل iPhone 13 Pro Max">
+                                </div>
+                            </figure>
+
+                        </article>
+                    </a>
+                </div>
+                <div class="swiper-slide space-y-3 px-1.5 py-2">
+                    <a href="#" class="w-full block">
+                        <article
+                                class="flex py-2 px-3 rounded-xl
+                            bg-white dark:bg-custom-dark
+                            border border-gray-200 dark:border-gray-700
+                            hover:bg-gray-100 dark:hover:bg-[#13171c]
+                            transition-colors duration-200 shadow-sm
+                            items-center justify-between">
+
+                            <section class="w-1/6 border-e-2 border-gray-300 dark:border-neutral-600">
+                                <div class="text-center">
+                                    <span class="font-bold text-3xl text-primary">4</span>
+                                </div>
+                            </section>
+
+                            <section class="w-3/6 space-y-2 ps-3">
+                                <h3 itemprop="name"
+                                    class="font-bold leading-loose line-clamp-2 h-13 text-xs text-gray-900 dark:text-gray-200">
+                                    گوشی موبایل اپل مدل iPhone 13 Pro Max دو سیم کارت
+                                </h3>
+                            </section>
+
+                            <figure class="w-2/6">
+                                <div class="text-end flex justify-end">
+                                    <img src="assets/images/product/mobile-4.png" class="size-20" loading="lazy"
+                                         alt="گوشی موبایل اپل مدل iPhone 13 Pro Max">
+                                </div>
+                            </figure>
+
+                        </article>
+                    </a>
+                    <a href="#" class="w-full block">
+                        <article
+                                class="flex py-2 px-3 rounded-xl
+                            bg-white dark:bg-custom-dark
+                            border border-gray-200 dark:border-gray-700
+                            hover:bg-gray-100 dark:hover:bg-[#13171c]
+                            transition-colors duration-200 shadow-sm
+                            items-center justify-between">
+
+                            <section class="w-1/6 border-e-2 border-gray-300 dark:border-neutral-600">
+                                <div class="text-center">
+                                    <span class="font-bold text-3xl text-primary">5</span>
+                                </div>
+                            </section>
+
+                            <section class="w-3/6 space-y-2 ps-3">
+                                <h3 itemprop="name"
+                                    class="font-bold leading-loose line-clamp-2 h-13 text-xs text-gray-900 dark:text-gray-200">
+                                    گوشی موبایل اپل مدل iPhone 13 Pro Max دو سیم کارت
+                                </h3>
+                            </section>
+
+                            <figure class="w-2/6">
+                                <div class="text-end flex justify-end">
+                                    <img src="assets/images/product/mobile-6.png" class="size-20" loading="lazy"
+                                         alt="گوشی موبایل اپل مدل iPhone 13 Pro Max">
+                                </div>
+                            </figure>
+
+                        </article>
+                    </a>
+                    <a href="#" class="w-full block">
+                        <article
+                                class="flex py-2 px-3 rounded-xl
+                            bg-white dark:bg-custom-dark
+                            border border-gray-200 dark:border-gray-700
+                            hover:bg-gray-100 dark:hover:bg-[#13171c]
+                            transition-colors duration-200 shadow-sm
+                            items-center justify-between">
+
+                            <section class="w-1/6 border-e-2 border-gray-300 dark:border-neutral-600">
+                                <div class="text-center">
+                                    <span class="font-bold text-3xl text-primary">6</span>
+                                </div>
+                            </section>
+
+                            <section class="w-3/6 space-y-2 ps-3">
+                                <h3 itemprop="name"
+                                    class="font-bold leading-loose line-clamp-2 h-13 text-xs text-gray-900 dark:text-gray-200">
+                                    گوشی موبایل اپل مدل iPhone 13 Pro Max دو سیم کارت
+                                </h3>
+                            </section>
+
+                            <figure class="w-2/6">
+                                <div class="text-end flex justify-end">
+                                    <img src="assets/images/product/wach-4.png" class="size-20" loading="lazy"
+                                         alt="گوشی موبایل اپل مدل iPhone 13 Pro Max">
+                                </div>
+                            </figure>
+
+                        </article>
+                    </a>
+                </div>
+                <div class="swiper-slide space-y-3 px-1.5 py-2">
+                    <a href="#" class="w-full block">
+                        <article
+                                class="flex py-2 px-3 rounded-xl
+                            bg-white dark:bg-custom-dark
+                            border border-gray-200 dark:border-gray-700
+                            hover:bg-gray-100 dark:hover:bg-[#13171c]
+                            transition-colors duration-200 shadow-sm
+                            items-center justify-between">
+
+                            <section class="w-1/6 border-e-2 border-gray-300 dark:border-neutral-600">
+                                <div class="text-center">
+                                    <span class="font-bold text-3xl text-primary">7</span>
+                                </div>
+                            </section>
+
+                            <section class="w-3/6 space-y-2 ps-3">
+                                <h3 itemprop="name"
+                                    class="font-bold leading-loose line-clamp-2 h-13 text-xs text-gray-900 dark:text-gray-200">
+                                    گوشی موبایل اپل مدل iPhone 13 Pro Max دو سیم کارت
+                                </h3>
+                            </section>
+
+                            <figure class="w-2/6">
+                                <div class="text-end flex justify-end">
+                                    <img src="assets/images/product/mobile-5.png" class="size-20" loading="lazy"
+                                         alt="گوشی موبایل اپل مدل iPhone 13 Pro Max">
+                                </div>
+                            </figure>
+
+                        </article>
+                    </a>
+                    <a href="#" class="w-full block">
+                        <article
+                                class="flex py-2 px-3 rounded-xl
+                            bg-white dark:bg-custom-dark
+                            border border-gray-200 dark:border-gray-700
+                            hover:bg-gray-100 dark:hover:bg-[#13171c]
+                            transition-colors duration-200 shadow-sm
+                            items-center justify-between">
+
+                            <section class="w-1/6 border-e-2 border-gray-300 dark:border-neutral-600">
+                                <div class="text-center">
+                                    <span class="font-bold text-3xl text-primary">8</span>
+                                </div>
+                            </section>
+
+                            <section class="w-3/6 space-y-2 ps-3">
+                                <h3 itemprop="name"
+                                    class="font-bold leading-loose line-clamp-2 h-13 text-xs text-gray-900 dark:text-gray-200">
+                                    گوشی موبایل اپل مدل iPhone 13 Pro Max دو سیم کارت
+                                </h3>
+                            </section>
+
+                            <figure class="w-2/6">
+                                <div class="text-end flex justify-end">
+                                    <img src="assets/images/product/mobile-1.png" class="size-20" loading="lazy"
+                                         alt="گوشی موبایل اپل مدل iPhone 13 Pro Max">
+                                </div>
+                            </figure>
+
+                        </article>
+                    </a>
+                    <a href="#" class="w-full block">
+                        <article
+                                class="flex py-2 px-3 rounded-xl
+                            bg-white dark:bg-custom-dark
+                            border border-gray-200 dark:border-gray-700
+                            hover:bg-gray-100 dark:hover:bg-[#13171c]
+                            transition-colors duration-200 shadow-sm
+                            items-center justify-between">
+
+                            <section class="w-1/6 border-e-2 border-gray-300 dark:border-neutral-600">
+                                <div class="text-center">
+                                    <span class="font-bold text-3xl text-primary">9</span>
+                                </div>
+                            </section>
+
+                            <section class="w-3/6 space-y-2 ps-3">
+                                <h3 itemprop="name"
+                                    class="font-bold leading-loose line-clamp-2 h-13 text-xs text-gray-900 dark:text-gray-200">
+                                    گوشی موبایل اپل مدل iPhone 13 Pro Max دو سیم کارت
+                                </h3>
+                            </section>
+
+                            <figure class="w-2/6">
+                                <div class="text-end flex justify-end">
+                                    <img src="assets/images/product/wach-3.png" class="size-20" loading="lazy"
+                                         alt="گوشی موبایل اپل مدل iPhone 13 Pro Max">
+                                </div>
+                            </figure>
+
+                        </article>
+                    </a>
+                </div>
+                <div class="swiper-slide space-y-3 px-1.5 py-2">
+                    <a href="#" class="w-full block">
+                        <article
+                                class="flex py-2 px-3 rounded-xl
+                            bg-white dark:bg-custom-dark
+                            border border-gray-200 dark:border-gray-700
+                            hover:bg-gray-100 dark:hover:bg-[#13171c]
+                            transition-colors duration-200 shadow-sm
+                            items-center justify-between">
+
+                            <section class="w-1/6 border-e-2 border-gray-300 dark:border-neutral-600">
+                                <div class="text-center">
+                                    <span class="font-bold text-3xl text-primary">10</span>
+                                </div>
+                            </section>
+
+                            <section class="w-3/6 space-y-2 ps-3">
+                                <h3 itemprop="name"
+                                    class="font-bold leading-loose line-clamp-2 h-13 text-xs text-gray-900 dark:text-gray-200">
+                                    گوشی موبایل اپل مدل iPhone 13 Pro Max دو سیم کارت
+                                </h3>
+                            </section>
+
+                            <figure class="w-2/6">
+                                <div class="text-end flex justify-end">
+                                    <img src="assets/images/product/mobile-6.png" class="size-20" loading="lazy"
+                                         alt="گوشی موبایل اپل مدل iPhone 13 Pro Max">
+                                </div>
+                            </figure>
+
+                        </article>
+                    </a>
+                    <a href="#" class="w-full block">
+                        <article
+                                class="flex py-2 px-3 rounded-xl
+                            bg-white dark:bg-custom-dark
+                            border border-gray-200 dark:border-gray-700
+                            hover:bg-gray-100 dark:hover:bg-[#13171c]
+                            transition-colors duration-200 shadow-sm
+                            items-center justify-between">
+
+                            <section class="w-1/6 border-e-2 border-gray-300 dark:border-neutral-600">
+                                <div class="text-center">
+                                    <span class="font-bold text-3xl text-primary">11</span>
+                                </div>
+                            </section>
+
+                            <section class="w-3/6 space-y-2 ps-3">
+                                <h3 itemprop="name"
+                                    class="font-bold leading-loose line-clamp-2 h-13 text-xs text-gray-900 dark:text-gray-200">
+                                    گوشی موبایل اپل مدل iPhone 13 Pro Max دو سیم کارت
+                                </h3>
+                            </section>
+
+                            <figure class="w-2/6">
+                                <div class="text-end flex justify-end">
+                                    <img src="assets/images/product/mobile-4.png" class="size-20" loading="lazy"
+                                         alt="گوشی موبایل اپل مدل iPhone 13 Pro Max">
+                                </div>
+                            </figure>
+
+                        </article>
+                    </a>
+                    <a href="#" class="w-full block">
+                        <article
+                                class="flex py-2 px-3 rounded-xl
+                            bg-white dark:bg-custom-dark
+                            border border-gray-200 dark:border-gray-700
+                            hover:bg-gray-100 dark:hover:bg-[#13171c]
+                            transition-colors duration-200 shadow-sm
+                            items-center justify-between">
+
+                            <section class="w-1/6 border-e-2 border-gray-300 dark:border-neutral-600">
+                                <div class="text-center">
+                                    <span class="font-bold text-3xl text-primary">12</span>
+                                </div>
+                            </section>
+
+                            <section class="w-3/6 space-y-2 ps-3">
+                                <h3 itemprop="name"
+                                    class="font-bold leading-loose line-clamp-2 h-13 text-xs text-gray-900 dark:text-gray-200">
+                                    گوشی موبایل اپل مدل iPhone 13 Pro Max دو سیم کارت
+                                </h3>
+                            </section>
+
+                            <figure class="w-2/6">
+                                <div class="text-end flex justify-end">
+                                    <img src="assets/images/product/wach-2.png" class="size-20" loading="lazy"
+                                         alt="گوشی موبایل اپل مدل iPhone 13 Pro Max">
+                                </div>
+                            </figure>
+
+                        </article>
+                    </a>
+                </div>
+                <div class="swiper-slide space-y-3 px-1.5 py-2">
+                    <a href="#" class="w-full block">
+                        <article
+                                class="flex py-2 px-3 rounded-xl
+                            bg-white dark:bg-custom-dark
+                            border border-gray-200 dark:border-gray-700
+                            hover:bg-gray-100 dark:hover:bg-[#13171c]
+                            transition-colors duration-200 shadow-sm
+                            items-center justify-between">
+
+                            <section class="w-1/6 border-e-2 border-gray-300 dark:border-neutral-600">
+                                <div class="text-center">
+                                    <span class="font-bold text-3xl text-primary">13</span>
+                                </div>
+                            </section>
+
+                            <section class="w-3/6 space-y-2 ps-3">
+                                <h3 itemprop="name"
+                                    class="font-bold leading-loose line-clamp-2 h-13 text-xs text-gray-900 dark:text-gray-200">
+                                    گوشی موبایل اپل مدل iPhone 13 Pro Max دو سیم کارت
+                                </h3>
+                            </section>
+
+                            <figure class="w-2/6">
+                                <div class="text-end flex justify-end">
+                                    <img src="assets/images/product/laptop-1.png" class="size-20" loading="lazy"
+                                         alt="گوشی موبایل اپل مدل iPhone 13 Pro Max">
+                                </div>
+                            </figure>
+
+                        </article>
+                    </a>
+                    <a href="#" class="w-full block">
+                        <article
+                                class="flex py-2 px-3 rounded-xl
+                            bg-white dark:bg-custom-dark
+                            border border-gray-200 dark:border-gray-700
+                            hover:bg-gray-100 dark:hover:bg-[#13171c]
+                            transition-colors duration-200 shadow-sm
+                            items-center justify-between">
+
+                            <section class="w-1/6 border-e-2 border-gray-300 dark:border-neutral-600">
+                                <div class="text-center">
+                                    <span class="font-bold text-3xl text-primary">14</span>
+                                </div>
+                            </section>
+
+                            <section class="w-3/6 space-y-2 ps-3">
+                                <h3 itemprop="name"
+                                    class="font-bold leading-loose line-clamp-2 h-13 text-xs text-gray-900 dark:text-gray-200">
+                                    گوشی موبایل اپل مدل iPhone 13 Pro Max دو سیم کارت
+                                </h3>
+                            </section>
+
+                            <figure class="w-2/6">
+                                <div class="text-end flex justify-end">
+                                    <img src="assets/images/product/mobile-1.png" class="size-20" loading="lazy"
+                                         alt="گوشی موبایل اپل مدل iPhone 13 Pro Max">
+                                </div>
+                            </figure>
+
+                        </article>
+                    </a>
+                    <a href="#" class="w-full block">
+                        <article
+                                class="flex py-2 px-3 rounded-xl
+                            bg-white dark:bg-custom-dark
+                            border border-gray-200 dark:border-gray-700
+                            hover:bg-gray-100 dark:hover:bg-[#13171c]
+                            transition-colors duration-200 shadow-sm
+                            items-center justify-between">
+
+                            <section class="w-1/6 border-e-2 border-gray-300 dark:border-neutral-600">
+                                <div class="text-center">
+                                    <span class="font-bold text-3xl text-primary">15</span>
+                                </div>
+                            </section>
+
+                            <section class="w-3/6 space-y-2 ps-3">
+                                <h3 itemprop="name"
+                                    class="font-bold leading-loose line-clamp-2 h-13 text-xs text-gray-900 dark:text-gray-200">
+                                    گوشی موبایل اپل مدل iPhone 13 Pro Max دو سیم کارت
+                                </h3>
+                            </section>
+
+                            <figure class="w-2/6">
+                                <div class="text-end flex justify-end">
+                                    <img src="assets/images/product/wach-1.png" class="size-20" loading="lazy"
+                                         alt="گوشی موبایل اپل مدل iPhone 13 Pro Max">
+                                </div>
+                            </figure>
+
+                        </article>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- END NEW PRODUCT SECTION -->
+
+
+
+
+    <!-- آیکون پشتیبانی شناور -->
+     <a href="./chat.html">
+    <div class="support-icon-container">
+        <div class="support-floating-icon">
+            <i class="fas fa-headset"></i>
+            <div class="support-tooltip">
+                پشتیبانی آنلاین
+            </div>
+        </div>
+    </div>
+</a>
+
+<!-- START BLOG ARTICLES SECTION -->
+<section class="py-16 bg-gradient-to-b from-transparent to-gray-50 dark:from-transparent dark:to-[#0f131c] relative overflow-hidden">
+    <!-- پس‌زمینه دکوراتیو -->
+    <div class="absolute top-0 left-0 w-64 h-64 bg-primary-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary-500/5 rounded-full blur-3xl"></div>
+
+    <div class="container relative z-10">
+        <!-- هدر بخش -->
+        <div class="section-header">
+            <h2 class="section-title"><i class="fas fa-newspaper"></i> وبلاگ Hello Shop</h2>
+            <a href="#" class="view-all">مشاهده همه <i class="fas fa-arrow-left"></i></a>
+        </div>
+
+        <!-- مقالات -->
+        <div class="swiper blog-articles-swiper !pb-12">
+            <div class="swiper-wrapper">
+
+                <!-- مقاله ۱ -->
+                <div class="swiper-slide group">
+                    <article class="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full">
+                        <!-- بدنه تصویر -->
+                        <div class="relative overflow-hidden h-56">
+                            <img src="{% static 'assets/images/blog//blog-4.jpg' %}" alt="نحوه نگهداری صحیح لپ‌تاپ"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                            <!-- تگ دسته‌بندی -->
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 bg-primary text-white text-xs font-bold rounded-full shadow-lg">
+                                    آموزش
+                                </span>
+                            </div>
+
+                            <!-- تاریخ -->
+                            <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white text-sm">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                <span>۲ روز پیش</span>
+                            </div>
+                        </div>
+
+                        <!-- محتوا -->
+                        <div class="p-6">
+                            <!-- تگ‌ها -->
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded-full">
+                                    لپ‌تاپ
+                                </span>
+                                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded-full">
+                                    نگهداری
+                                </span>
+                            </div>
+
+                            <!-- عنوان -->
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 line-clamp-2 group-hover:text-primary dark:group-hover:text-primary-400 transition-colors duration-300">
+                                <a href="#" class="hover:no-underline">
+                                    چگونه لپ‌تاپ خود را به بهترین شکل نگهداری کنیم؟
+                                </a>
+                            </h3>
+
+                            <!-- خلاصه -->
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 text-sm leading-relaxed">
+                                در این مقاله ۷ نکته طلایی برای افزایش عمر لپ‌تاپ و نگهداری صحیح از آن را بررسی می‌کنیم. از تمیز کردن کیبورد تا مدیریت دمای دستگاه.
+                            </p>
+
+                            <!-- فوتر مقاله -->
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700">
+                                <!-- نویسنده -->
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center text-white font-bold">
+                                        ع.ر
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-gray-900 dark:text-white">علی رضایی</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400">کارشناس سخت‌افزار</p>
+                                    </div>
+                                </div>
+
+                                <!-- آمار -->
+                                <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                        </svg>
+                                        <span>۲.۴K</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                        </svg>
+                                        <span>۱۴۲</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- مقاله ۲ -->
+                <div class="swiper-slide group">
+                    <article class="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full">
+                        <div class="relative overflow-hidden h-56">
+                            <img src="{% static 'assets/images/blog/blog-3.jpg' %}" alt="بهترین ساعت هوشمند ۲۰۲۴"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 bg-secondary text-white text-xs font-bold rounded-full shadow-lg">
+                                    بررسی
+                                </span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white text-sm">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                <span>۱ هفته پیش</span>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded-full">
+                                    ساعت هوشمند
+                                </span>
+                                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded-full">
+                                    گجت
+                                </span>
+                            </div>
+
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 line-clamp-2 group-hover:text-primary dark:group-hover:text-primary-400 transition-colors duration-300">
+                                <a href="#" class="hover:no-underline">
+                                    مقایسه ۵ ساعت هوشمند برتر سال ۲۰۲۴ - کدام برای شما مناسب‌تر است؟
+                                </a>
+                            </h3>
+
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 text-sm leading-relaxed">
+                                بررسی کامل Apple Watch Series 9، Samsung Galaxy Watch 6، Huawei Watch GT 4 و سایر مدل‌های محبوب. کدام یک ارزش خرید بیشتری دارد؟
+                            </p>
+
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold">
+                                        س.م
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-gray-900 dark:text-white">سارا محمدی</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400">کارشناس گجت‌ها</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                        </svg>
+                                        <span>۳.۱K</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                        </svg>
+                                        <span>۲۱۸</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- مقاله ۳ -->
+                <div class="swiper-slide group">
+                    <article class="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full">
+                        <div class="relative overflow-hidden h-56">
+                            <img src="assets/images/blog/blog-2.jpg" alt="راهنمای خرید گوشی گیمینگ"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full shadow-lg">
+                                    راهنمای خرید
+                                </span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white text-sm">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                <span>۲ هفته پیش</span>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded-full">
+                                    گوشی گیمینگ
+                                </span>
+                                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded-full">
+                                    بازی
+                                </span>
+                                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded-full">
+                                    عملکرد
+                                </span>
+                            </div>
+
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 line-clamp-2 group-hover:text-primary dark:group-hover:text-primary-400 transition-colors duration-300">
+                                <a href="#" class="hover:no-underline">
+                                    راهنمای کامل خرید گوشی موبایل مناسب گیمینگ - از بودجه تا پرچم‌دار
+                                </a>
+                            </h3>
+
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 text-sm leading-relaxed">
+                                بررسی معیارهای مهم برای انتخاب گوشی گیمینگ: پردازنده، رم، صفحه‌نمایش، باتری و سیستم خنک‌کنندگی. معرفی بهترین گزینه‌ها در هر رنج قیمتی.
+                            </p>
+
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold">
+                                        م.ح
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-gray-900 dark:text-white">مهدی حسینی</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400">کارشناس بازی</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                        </svg>
+                                        <span>۴.۷K</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                        </svg>
+                                        <span>۳۲۵</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- مقاله ۴ -->
+                <div class="swiper-slide group">
+                    <article class="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full">
+                        <div class="relative overflow-hidden h-56">
+                            <img src="assets/images/blog/blog-3.jpg" alt="ترفندهای عکاسی موبایل"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 bg-purple-500 text-white text-xs font-bold rounded-full shadow-lg">
+                                    ترفند
+                                </span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white text-sm">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                <span>۱ ماه پیش</span>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded-full">
+                                    عکاسی
+                                </span>
+                                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded-full">
+                                    موبایل
+                                </span>
+                                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded-full">
+                                    آموزشی
+                                </span>
+                            </div>
+
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 line-clamp-2 group-hover:text-primary dark:group-hover:text-primary-400 transition-colors duration-300">
+                                <a href="#" class="hover:no-underline">
+                                    ۱۰ ترفند حرفه‌ای عکاسی با موبایل که عکس‌های شما را متحول می‌کند
+                                </a>
+                            </h3>
+
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 text-sm leading-relaxed">
+                                آموزش تنظیمات دوربین موبایل، ترکیب‌بندی، نورپردازی و ویرایش عکس. حتی با یک گوشی معمولی هم می‌توانید عکس‌های حرفه‌ای بگیرید!
+                            </p>
+
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 flex items-center justify-center text-white font-bold">
+                                        ف.ن
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-gray-900 dark:text-white">فاطمه نوروزی</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400">عکاس حرفه‌ای</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                        </svg>
+                                        <span>۵.۲K</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                        </svg>
+                                        <span>۴۳۷</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- پاگینیشن -->
+            <div class="swiper-pagination blog-pagination !bottom-0"></div>
+        </div>
+
+        <!-- CTA اضافی -->
+        <div class="mt-16 text-center">
+            <div class="bg-gradient-to-r from-primary-500/10 to-secondary-500/10 dark:from-primary-500/5 dark:to-secondary-500/5 rounded-2xl p-8 md:p-12">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                    عضو خبرنامه مقالات شوید!
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
+                    هر هفته جدیدترین مقالات آموزشی و بررسی محصولات را مستقیم در ایمیل خود دریافت کنید
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
+                    <input type="email" placeholder="ایمیل خود را وارد کنید"
+                           class="flex-grow px-6 py-3 rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <button class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-full font-bold hover:shadow-xl hover:scale-105 transition-all duration-300 active:scale-95"
+                    >
+                        عضویت رایگان
+                    </button>
+                </div>
+            </div>
+        </div>
+</div>
+</section>
+<!-- END BLOG ARTICLES SECTION -->
+
+<!-- اسکریپت Swiper برای مقالات -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Swiper برای مقالات
+        const blogSwiper = new Swiper('.blog-articles-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.blog-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + ' w-2 h-2 bg-gray-300 dark:bg-gray-700 rounded-full opacity-50 hover:opacity-100 transition-opacity duration-300"></span>';
+                },
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+                1280: {
+                    slidesPerView: 4,
+                }
+            },
+            navigation: {
+                nextEl: '.blog-swiper-next',
+                prevEl: '.blog-swiper-prev',
+            },
+        });
+
+        // انیمیشن برای ورود مقالات
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // اعمال انیمیشن به مقالات
+        document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+            slide.style.opacity = '0';
+            slide.style.transform = 'translateY(20px)';
+            slide.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+            observer.observe(slide);
+        });
+
+        // انیمیشن هایور برای مقالات
+        document.querySelectorAll('article').forEach(article => {
+            article.addEventListener('mouseenter', function() {
+                const image = this.querySelector('img');
+                if (image) {
+                    image.style.transform = 'scale(1.1)';
+                }
+            });
+            
+            article.addEventListener('mouseleave', function() {
+                const image = this.querySelector('img');
+                if (image) {
+                    image.style.transform = 'scale(1)';
+                }
+            });
+        });
+
+        // تعامل با تگ‌ها
+        document.querySelectorAll('article .bg-gray-100, article .bg-gray-700').forEach(tag => {
+            tag.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+                this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+            });
+            
+            tag.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    });
+</script>
+
+<!-- استایل‌های سفارشی -->
+<style>
+    /* انیمیشن‌های سفارشی */
+    @keyframes floatIn {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .blog-articles-swiper {
+        animation: floatIn 0.8s ease-out;
+    }
+
+    /* استایل پاگینیشن */
+    .blog-pagination .swiper-pagination-bullet-active {
+        background: linear-gradient(135deg, #3b82f6, #ec4899) !important;
+        opacity: 1 !important;
+        width: 24px !important;
+        border-radius: 6px !important;
+    }
+
+    /* افکت شیشه‌ای برای مقالات */
+    article {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    .dark article {
+        background: rgba(30, 41, 59, 0.95);
+    }
+
+    /* انیمیشن برای نویسنده */
+    article .w-10.h-10 {
+        transition: all 0.3s ease;
+    }
+
+    article:hover .w-10.h-10 {
+        transform: rotate(10deg) scale(1.1);
+    }
+
+    /* خط کشی انیمیشنی برای فوتر مقالات */
+    article .border-t {
+        position: relative;
+        overflow: hidden;
+    }
+
+    article .border-t::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #3b82f6, #ec4899);
+        transition: width 0.5s ease;
+    }
+
+    article:hover .border-t::before {
+        width: 100%;
+    }
+
+    /* انیمیشن برای آمار */
+    article .flex.items-center.gap-4 span {
+        transition: all 0.3s ease;
+    }
+
+    article:hover .flex.items-center.gap-4 span {
+        color: #3b82f6;
+    }
+
+    /* اسکرول بار سفارشی برای مقالات */
+    .blog-articles-swiper::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .blog-articles-swiper::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+    }
+
+    .blog-articles-swiper::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #3b82f6, #ec4899);
+        border-radius: 4px;
+    }
+
+    .dark .blog-articles-swiper::-webkit-scrollbar-track {
+        background: #374151;
+    }
+
+    /* افکت نور برای عنوان مقالات */
+    h3 a {
+        position: relative;
+        display: inline-block;
+    }
+
+    h3 a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #3b82f6, #ec4899);
+        transition: width 0.3s ease;
+    }
+
+    h3 a:hover::after {
+        width: 100%;
+    }
+</style>
+<!-- START FOOTER -->
+<footer class="bg-gray-100 dark:bg-[#0d1117] text-gray-700 dark:text-gray-300 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+    <div class="container py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+
+            <!-- درباره ما -->
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2">
+                    <img class="h-10 dark:invert" src="{% static 'assets/images/logo.png' %}" loading="lazy" alt="لوگو نواچین">
+                    <span class="text-xl font-bold text-gray-900 dark:text-white">نواچین</span>
+                </div>
+                <p class="text-sm leading-relaxed">
+                    فروشگاه اینترنتی نواچین، به عنوان یکی از معتبرترین و محبوب‌ترین پلتفرم‌های خرید آنلاین در کشور، با commitment قوی به اصالت کالا، کیفیت خدمات و رضایت کامل مشتری، در خدمت شماست. ما با پشتیبانی از یک زنجیره تامین شفاف، انبارهای استاندارد و کارشناسان متخصص، اطمینان می‌دهیم که هر محصولی که از ما خریداری می‌کنید، ۱۰۰٪ اصل و اصیل و با گارانتی رسمی عرضه می‌شود. گارانتی                              </p>                </p>
+                <div class="flex space-x-4 rtl:space-x-reverse">
+                    <a href="#" class="text-gray-500 hover:text-primary dark:hover:text-primary-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-primary dark:hover:text-primary-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-primary dark:hover:text-primary-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.088c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.088c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-primary dark:hover:text-primary-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- لینک‌های سریع -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">لینک‌های سریع</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-primary dark:hover:text-primary-400 transition-colors">صفحه اصلی</a></li>
+                    <li><a href="#" class="hover:text-primary dark:hover:text-primary-400 transition-colors">محصولات شگفت‌انگیز</a></li>
+                    <li><a href="#" class="hover:text-primary dark:hover:text-primary-400 transition-colors">جدیدترین محصولات</a></li>
+                    <li><a href="#" class="hover:text-primary dark:hover:text-primary-400 transition-colors">پرفروش‌ترین‌ها</a></li>
+                    <li><a href="#" class="hover:text-primary dark:hover:text-primary-400 transition-colors">تخفیف‌های ویژه</a></li>
+                    <li><a href="#" class="hover:text-primary dark:hover:text-primary-400 transition-colors">حراج فصلی</a></li>
+                </ul>
+            </div>
+
+            <!-- خدمات مشتریان -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">خدمات مشتریان</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-primary dark:hover:text-primary-400 transition-colors">پرسش‌های متداول</a></li>
+                    <li><a href="#" class="hover:text-primary dark:hover:text-primary-400 transition-colors">رویه ارسال سفارش</a></li>
+                    <li><a href="#" class="hover:text-primary dark:hover:text-primary-400 transition-colors">شرایط بازگرداندن کالا</a></li>
+                    <li><a href="#" class="hover:text-primary dark:hover:text-primary-400 transition-colors">گارانتی محصولات</a></li>
+                    <li><a href="#" class="hover:text-primary dark:hover:text-primary-400 transition-colors">حریم خصوصی</a></li>
+                    <li><a href="#" class="hover:text-primary dark:hover:text-primary-400 transition-colors">قوانین و مقررات</a></li>
+                </ul>
+            </div>
+
+            <!-- خبرنامه و تماس -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">دریافت خبرنامه</h3>
+                <p class="text-sm"> </p>
+                <form class="space-y-3">
+                    <div class="flex">
+                        <input type="email" placeholder="ایمیل خود را وارد کنید"
+                               class="flex-grow px-4 py-3 rounded-r-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <button type="submit" class="bg-primary text-white px-4 py-3 rounded-l-lg hover:bg-primary-600 transition-colors">
+                            عضویت
+                        </button>
+                    </div>
+                </form>
+
+                <div class="pt-4 border-t border-gray-200 dark:border-gray-800">
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-2">اطلاعات تماس</h4>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center space-x-2 rtl:space-x-reverse">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>۰۲۱-۱۲۳۴۵۶۷۸</span>
+                        </div>
+                        <div class="flex items-center space-x-2 rtl:space-x-reverse">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>info@digisite.com</span>
+                        </div>
+                        <div class="flex items-center space-x-2 rtl:space-x-reverse">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>تهران، خیابان ولیعصر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- نشان‌های اعتماد -->
+        <div class="py-6 border-t border-gray-200 dark:border-gray-800">
+            <h4 class="text-center font-bold text-gray-900 dark:text-white mb-4">نشان‌های اعتماد</h4>
+            <div class="flex flex-wrap justify-center items-center gap-6">
+                <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow">
+                    <img src="{% static 'assets/images/logo/enamad.png' %}" class="h-12" alt="ضمانت بازگشت">
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow">
+                    <img src="./assets/images/logo/zarinPal.png" class="h-12" alt="تحویل سریع">
+                </div>
+            </div>
+        </div>
+
+        <!-- کپی‌رایت -->
+        <div class="pt-6 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="text-sm">
+                    <p>کلیه حقوق این وب‌سایت محفوظ و متعلق به فروشگاه اینترنتی نواچین می‌باشد.</p>
+                </div>
+                <div class="flex space-x-4 rtl:space-x-reverse text-sm">
+                    <a href="#" class="hover:text-primary dark:hover:text-primary-400 transition-colors">حریم خصوصی</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="#" class="hover:text-primary dark:hover:text-primary-400 transition-colors">قوانین و مقررات</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="#" class="hover:text-primary dark:hover:text-primary-400 transition-colors">سوالات متداول</a>
+                </div>
+            </div>
+            <div class="text-center mt-4 text-xs text-gray-500">
+            </div>
+        </div>
+    </div>
+
+    <!-- دکمه بازگشت به بالا -->
+    <button id="back-to-top" class="fixed bottom-6 left-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary-600 transition-all duration-300 opacity-0 invisible">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+</footer>
+<!-- END FOOTER -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- اسکریپت بازگشت به بالا -->
+<script>
+    // دکمه بازگشت به بالا
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.remove('opacity-0', 'invisible');
+            backToTopButton.classList.add('opacity-100', 'visible');
+        } else {
+            backToTopButton.classList.remove('opacity-100', 'visible');
+            backToTopButton.classList.add('opacity-0', 'invisible');
+        }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+<!-- CART CANVAS -->
+<div id="offcanvas-left"
+     class="offcanvas invisible fixed top-0 end-0 sm:w-100 w-[80%] h-full bg-white dark:bg-[#0d1117] text-gray-900 dark:text-gray-100 border-s border-gray-200 dark:border-gray-800 shadow-xl dark:shadow-[0_0_20px_rgba(0,0,0,0.6)] transform translate-x-full transition-all duration-300 opacity-0 z-50"
+     role="dialog" aria-labelledby="cart-title" aria-modal="true">
+
+    <!-- Header -->
+    <header class="border-b border-gray-200 dark:border-gray-700 p-3 flex items-center justify-between">
+        <h2 id="cart-title" class="font-bold text-base">سبد خرید شما</h2>
+        <button onclick="closeOffcanvas()" class="cursor-pointer" aria-label="بستن سبد خرید">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                 stroke="currentColor"
+                 class="size-8 text-gray-700 dark:text-gray-300 hover:text-primary-500 transition-colors">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+            </svg>
+        </button>
+    </header>
+
+    <!-- Cart Items -->
+    <main class="relative space-y-4 divide-y divide-gray-200 dark:divide-gray-800 p-3 overflow-y-scroll h-full">
+
+        <!-- Product 1 -->
+        <div class="py-3 last:mb-35">
+            <div class="flex flex-wrap items-center">
+                <div class="text-start w-1/3">
+                    <img class="max-w-full rounded-lg shadow-sm dark:shadow-[0_0_10px_rgba(0,0,0,0.5)]"
+                         src="{% static 'assets/images/product/wach-1.png' %}"
+                         alt="ساعت مچی عقربه‌ای مردانه اینویکتا مدل Automatico Ghost Reserve" loading="lazy">
+                </div>
+
+                <div class="w-2/3 space-y-4 px-2">
+                    <h3 class="font-bold leading-7 text-gray-800 dark:text-gray-100">
+                        <a href="#">
+                            ساعت مچی عقربه‌ای مردانه اینویکتا مدل Automatico Ghost Reserve
+                        </a>
+                    </h3>
+
+                    <div class="flex items-center justify-between">
+                        <del class="text-rose-600 dark:text-gray-400 line-through" content="IRR">
+                            <span>5,000,000</span>
+                        </del>
+                        <ins class="no-underline text-xl text-green-600 font-bold dark:text-green-400"
+                             content="2500000">
+                            2,500,000
+                            <span class="text-sm font-normal text-gray-700 dark:text-gray-300">تومان</span>
+                        </ins>
+                    </div>
+
+                    <div class="flex items-end justify-between">
+                        <span>تعداد: 3</span>
+                        <a href="#"
+                           class="bg-red-100 hover:bg-red-200 dark:bg-custom-dark dark:hover:bg-[#1f242c] text-red-800 dark:text-gray-200 border border-transparent dark:border-gray-700 p-2 rounded-lg transition-colors duration-200"
+                           role="button" aria-label="حذف محصول از سبد خرید">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                 stroke-width="1.5" stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer
+            class="p-3 absolute bottom-0 start-0 end-0 bg-white dark:bg-custom-dark border-t border-gray-200 dark:border-gray-700">
+        <div class="flex items-center justify-between">
+            <div class="space-y-2">
+                <span class="inline-block text-lg">جمع کل</span>
+                <h3 class="font-bold text-xl" content="11000000">
+                    11,000,000 تومان
+                </h3>
+            </div>
+            <div class="text-end">
+                <a href="#"
+                   class="bg-primary dark:bg-primary-500 hover:bg-primary-600 dark:hover:bg-primary-400 text-white py-2 px-4 rounded-lg shadow-sm transition-colors duration-200"
+                   role="button" aria-label="تکمیل فرایند خرید">
+                    تکمیل خرید
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- END CART CANVAS -->
+
+<!-- RESPONSIVE MENU -->
+<div id="offcanvas-right"
+     class="offcanvas invisible overflow-y-scroll fixed top-0 start-0 sm:w-100 w-[80%] h-full bg-white dark:bg-[#0d1117] text-gray-900 dark:text-gray-100 border-e border-gray-200 dark:border-gray-800 shadow-xl dark:shadow-[0_0_20px_rgba(0,0,0,0.6)] transform -translate-x-full transition-all duration-300 opacity-0 z-50"
+     role="navigation" aria-labelledby="store-menu-title" aria-modal="true">
+
+    <!-- header -->
+    <div class="border-b border-gray-200 dark:border-gray-700 p-3 flex items-center justify-between">
+        <h2 id="store-menu-title" class="font-bold text-base">فروشگاه نواچین</h2>
+        <button onclick="closeOffcanvas()" class="cursor-pointer" aria-label="بستن منوی فروشگاه">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                 stroke="currentColor"
+                 class="size-8 text-gray-700 dark:text-gray-300 hover:text-primary-500 transition-colors">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- navigation -->
+    <nav style="padding-left: 12px" class="relative space-y-3 divide-y divide-gray-100 dark:divide-gray-800 p-3 overflow-y-scroll h-full"
+         style="padding-left: 0!important;" aria-label="منوی اصلی">
+        <ul class="space-y-2 text-sm">
+
+            <!-- item -->
+            <li
+                    class="bg-gray-50 dark:bg-custom-dark border border-gray-200 dark:border-gray-700 rounded-lg text-gray-800 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-[#1f242c] p-2 transition-colors duration-200">
+                <a href="#" class="block">صفحه اصلی</a>
+            </li>
+
+            <!-- dropdown -->
+            <li
+                    class="bg-gray-50 dark:bg-custom-dark border border-gray-200 dark:border-gray-700 rounded-lg text-gray-800 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-[#1f242c] p-2 transition-colors duration-200">
+
+                <button class="flex justify-between w-full text-start items-center" aria-expanded="false"
+                        aria-controls="menu1" id="menu1-button" onclick="toggleDropdown('menu1')">
+                    <span>گوشی موبایل</span>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="h-5 w-5 transition-transform transform text-gray-600 dark:text-gray-300"
+                         id="icon-menu1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd"/>
+                    </svg>
+                </button>
+
+                <ul id="menu1"
+                    class="hidden bg-gray-100 dark:bg-[#0d1117] dark:text-gray-200 rounded-md mt-2 border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300"
+                    role="menu" aria-labelledby="menu1-button">
+
+                    <li class="border-b border-gray-200 dark:border-gray-700">
+                        <button class="flex justify-between w-full px-6 py-2 text-start items-center"
+                                aria-expanded="false" aria-controls="submenu1" id="submenu1-button"
+                                onclick="toggleDropdown('submenu1')">
+                            <span>برند</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="h-5 w-5 transition-transform transform text-gray-600 dark:text-gray-300"
+                                 id="icon-submenu1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+
+                        <!-- Submenu -->
+                        <ul id="submenu1" class="hidden bg-gray-50 dark:bg-custom-dark dark:text-gray-300" role="menu"
+                            aria-labelledby="submenu1-button">
+                            <li
+                                    class="px-8 py-2 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-[#1f242c]">
+                                سامسونگ
+                            </li>
+                            <li
+                                    class="px-8 py-2 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-[#1f242c]">
+                                اپل
+                            </li>
+                            <li
+                                    class="px-8 py-2 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-[#1f242c]">
+                                شیائومی
+                            </li>
+                            <li
+                                    class="px-8 py-2 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-[#1f242c]">
+                                هواوی
+                            </li>
+                            <li
+                                    class="px-8 py-2 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-[#1f242c]">
+                                نوکیا
+                            </li>
+                            <li
+                                    class="px-8 py-2 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-[#1f242c]">
+                                ال‌جی
+                            </li>
+                            <li
+                                    class="px-8 py-2 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-[#1f242c]">
+                                سونی
+                            </li>
+                            <li
+                                    class="px-8 py-2 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-[#1f242c]">
+                                گوگل
+                            </li>
+                            <li
+                                    class="px-8 py-2 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-[#1f242c]">
+                                وان پلاس
+                            </li>
+                            <li
+                                    class="px-8 py-2 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-[#1f242c]">
+                                موتورولا
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li
+                            class="px-6 py-2 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-[#1f242c]">
+                        <a href="#" class="block">پرچمدار</a>
+                    </li>
+                    <li
+                            class="px-6 py-2 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-[#1f242c]">
+                        <a href="#" class="block">میان‌رده</a>
+                    </li>
+                    <li class="px-6 py-2 hover:bg-gray-100 dark:hover:bg-[#1f242c]">
+                        <a href="#" class="block">اقتصادی</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- pages -->
+            <li
+                    class="bg-gray-50 dark:bg-custom-dark border border-gray-200 dark:border-gray-700 rounded-lg text-gray-800 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-[#1f242c] p-2 transition-colors duration-200">
+                <a href="#" class="block">صفحات</a>
+            </li>
+
+        </ul>
+    </nav>
+</div>
+<!-- END RESPONSIVE MENU -->
+
+<!-- MODAL LOGIN -->
+<div id="LoginModal" role="dialog" aria-modal="true" aria-labelledby="LoginModalTitle" data-modal-id="LoginModal"
+     class="modal hidden fixed inset-0 z-50 overflow-auto backdrop-blur bg-opacity-50">
+    <div class="relative p-4 w-full max-w-lg m-auto flex items-center min-h-screen">
+        <div class="bg-white relative w-full dark:bg-custom-dark rounded-2xl shadow-soft p-8 border border-gray-100 dark:border-gray-700 fade-in">
+
+            <!--close button-->
+            <button class="absolute p-4 top-0 end-0" data-modal-close>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <!-- logo -->
+            <div class="flex items-center mb-5 justify-center">
+                <img class="h-12 dark:invert" src="assets/images/logo.png" loading="lazy" alt="">
+            </div>
+
+            <!-- Step Indicators -->
+            <div class="flex justify-center mb-6">
+                <span class="step-indicator active" data-step="1"></span>
+                <span class="step-indicator" data-step="2"></span>
+                <span class="step-indicator" data-step="3"></span>
+                <span class="step-indicator" data-step="4"></span>
+            </div>
+
+            <!-- Title -->
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2" id="step-title">ورود / ثبت نام</h2>
+                <p class="text-gray-500 dark:text-gray-400 text-sm" id="step-description">برای ثبت نام یا ورود، شماره موبایل خود را وارد کنید</p>
+            </div>
+
+            <!-- Step 1: Mobile Number Input -->
+            <div class="form-step active" id="step-1">
+                <form class="space-y-5" id="authForm" novalidate>
+                    <!-- Mobile number -->
+                    <div>
+                        <label for="mobile" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">شماره موبایل</label>
+                        <div class="relative">
+                            <input
+                                    name="mobile"
+                                    type="tel"
+                                    id="mobile"
+                                    inputmode="numeric"
+                                    pattern="09[0-9]{9}"
+                                    class="w-full ps-12 pe-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-custom-dark dark:text-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder-gray-400 dark:placeholder-gray-500 transition-colors duration-200"
+                                    placeholder="09xxxxxxxxx"
+                                    required
+                            >
+                            <div class="absolute input-icon top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="error-message text-sm text-red-600 mt-2 hidden" id="mobile-error"></p>
+                    </div>
+
+                    <!-- Continue button -->
+                    <div>
+                        <button type="button" id="checkMobileBtn" class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors">
+                            <span class="flex items-center">
+                                ادامه
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 ms-2">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Social login -->
+                <div class="mt-6">
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300 dark:border-gray-700"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-2 bg-white dark:bg-custom-dark text-gray-500 dark:text-gray-400">یا ورود با</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 grid grid-cols-3 gap-3">
+                        <div class="col-span-3">
+                            <a href="#" class="w-full inline-flex justify-center items-center py-4 px-4 border border-gray-300 dark:border-gray-700 rounded-xl shadow-sm bg-white dark:bg-custom-dark text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-[#1f242c] transition-colors">
+                                <span class="me-3">حساب کاربری گوگل</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><g fill="none" fill-rule="evenodd" clip-rule="evenodd"><path fill="#F44336" d="M7.209 1.061c.725-.081 1.154-.081 1.933 0a6.57 6.57 0 0 1 3.65 1.82a100 100 0 0 0-1.986 1.93q-1.876-1.59-4.188-.734q-1.696.78-2.362 2.528a78 78 0 0 1-2.148-1.658a.26.26 0 0 0-.16-.027q1.683-3.245 5.26-3.86" opacity=".987"/><path fill="#FFC107" d="M1.946 4.92q.085-.013.161.027a78 78 0 0 0 2.148 1.658A7.6 7.6 0 0 0 4.04 7.99q.037.678.215 1.331L2 11.116Q.527 8.038 1.946 4.92" opacity=".997"/><path fill="#448AFF" d="M12.685 13.29a26 26 0 0 0-2.202-1.74q1.15-.812 1.396-2.228H8.122V6.713q3.25-.027 6.497.055q.616 3.345-1.423 6.032a7 7 0 0 1-.51.49" opacity=".999"/><path fill="#43A047" d="M4.255 9.322q1.23 3.057 4.51 2.854a3.94 3.94 0 0 0 1.718-.626q1.148.812 2.202 1.74a6.62 6.62 0 0 1-4.027 1.684a6.4 6.4 0 0 1-1.02 0Q3.82 14.524 2 11.116z" opacity=".993"/></g></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Login Method Selection -->
+            <div class="form-step" id="step-2">
+                <div class="space-y-4">
+                    <!-- Method selection buttons -->
+                    <button type="button" id="chooseOtpLogin" class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors">
+                        ورود با کد یکبار مصرف
+                    </button>
+
+                    <button type="button" id="choosePasswordLogin" class="w-full flex justify-center items-center py-3 px-4 border border-gray-300 rounded-xl shadow-sm text-sm font-medium text-gray-700 bg-white dark:bg-custom-dark dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-[#1f242c] transition-colors">
+                        ورود با رمز عبور
+                    </button>
+
+                    <!-- Forgot Password Link -->
+                    <div class="text-center pt-2">
+                        <button type="button" id="showForgotPasswordStep" class="text-sm text-primary hover:text-primary/90 transition-colors">
+                            رمز عبور خود را فراموش کرده‌اید؟
+                        </button>
+                    </div>
+
+                    <!-- Password login form (hidden by default) -->
+                    <form id="passwordLoginForm" class="hidden space-y-5">
+                        <div>
+                            <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">رمز عبور</label>
+                            <div class="relative">
+                                <input
+                                        type="password"
+                                        id="password"
+                                        autocomplete="password"
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-custom-dark dark:text-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                        placeholder="رمز عبور خود را وارد کنید"
+                                        required
+                                >
+                                <button type="button" class="absolute password-toggle top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500" onclick="togglePassword('password', this)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    </svg>
+
+                                </button>
+                            </div>
+                            <p class="error-message text-sm text-red-600 mt-2 hidden" id="password-error"></p>
+                        </div>
+
+                        <div class="text-right">
+                            <button type="button" id="showForgotPasswordStep2" class="text-sm text-primary hover:text-primary/90 transition-colors">
+                                رمز عبور خود را فراموش کرده‌اید؟
+                            </button>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <button type="button" id="backToMethod" class="flex-1 py-3 px-4 border border-gray-300 rounded-xl text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-custom-dark hover:bg-gray-50 dark:hover:bg-[#1f242c] transition-colors">
+                                بازگشت
+                            </button>
+                            <button type="button" id="loginWithPassword" class="flex-1 py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors">
+                                ورود
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="text-center pt-4 border-t border-gray-200 dark:border-gray-700">
+                        <button type="button" id="backToMobile" class="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
+                            تغییر شماره موبایل
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: OTP Verification -->
+            <div class="form-step" id="step-3">
+                <form class="space-y-5" id="otpForm" novalidate>
+                    <div class="text-center mb-4">
+                        <p class="text-green-600 text-sm mb-3">کد تایید برای <strong style="direction: ltr" id="maskedMobile">09******123</strong> ارسال شد</p>
+                        <input
+                                name="otp_code"
+                                type="tel"
+                                id="otpCode"
+                                inputmode="numeric"
+                                pattern="[0-9]{4}"
+                                maxlength="4"
+                                class="w-full px-4 text-center text-lg py-3 border border-gray-300 dark:border-gray-700 dark:bg-custom-dark dark:text-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder-gray-400 dark:placeholder-gray-500"
+                                placeholder="_ _ _ _"
+                                required
+                                autofocus
+                        >
+                    </div>
+
+                    <p class="error-message text-sm text-red-600 text-center hidden" id="otp-error"></p>
+
+                    <div>
+                        <button type="button" id="verifyOtpBtn" class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors">
+                            ادامه ثبت نام
+                        </button>
+                    </div>
+
+                    <div class="text-center text-sm text-gray-500 dark:text-gray-400 mt-2 space-y-2">
+                        <div>
+                            <button type="button" id="resend-otp-button" class="transition-colors duration-200 text-primary hover:text-primary/90">
+                                <span class="text-green-600 font-medium">ارسال دوباره کد</span>
+                            </button>
+                        </div>
+                        <div class="flex justify-center items-center space-x-2">
+                            <button type="button" id="cancelOtp" class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-200 transition-colors">برگشت</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 4: New User Registration -->
+            <div class="form-step" id="step-4">
+                <form class="space-y-5">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">نام</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-custom-dark dark:text-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="نام" required>
+                            <p class="error-message text-sm text-red-600 mt-2 hidden" id="name-error"></p>
+                        </div>
+
+                        <div>
+                            <label for="family" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">نام خانوادگی</label>
+                            <input type="text" id="family" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-custom-dark dark:text-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="نام خانوادگی" required>
+                            <p class="error-message text-sm text-red-600 mt-2 hidden" id="family-error"></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="regPassword" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">رمز عبور</label>
+                        <div class="relative">
+                            <input type="password" autocomplete="regPassword" id="regPassword" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-custom-dark dark:text-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="رمز عبور دلخواه خود را وارد کنید" required>
+                            <button type="button" class="absolute password-toggle top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500" onclick="togglePassword('regPassword', this)">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Show password conditions -->
+                        <div class="mt-3 space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                            <div class="flex items-center" id="lengthCondition"><span class="w-4 h-4 ms-2">○</span>حداقل 8 کاراکتر</div>
+                            <div class="flex items-center" id="uppercaseCondition"><span class="w-4 h-4 ms-2">○</span>حرف بزرگ (A-Z)</div>
+                            <div class="flex items-center" id="lowercaseCondition"><span class="w-4 h-4 ms-2">○</span>حرف کوچک (a-z)</div>
+                            <div class="flex items-center" id="numberCondition"><span class="w-4 h-4 ms-2">○</span>عدد (0-9)</div>
+                        </div>
+
+                        <p class="error-message text-sm text-red-600 mt-2 hidden" id="regPassword-error"></p>
+                    </div>
+
+                    <button type="button" id="registerAndLogin" class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors">
+                        تکمیل ثبت نام و ورود
+                    </button>
+                </form>
+            </div>
+
+            <!-- Step 5: Forgot Password -->
+            <div class="form-step" id="step-5">
+                <form class="space-y-5">
+                    <div class="text-center mb-4">
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">
+                            برای بازیابی رمز عبور، کد تایید به شماره <strong id="forgotPasswordMobile">09******123</strong> ارسال خواهد شد.
+                        </p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <button type="button" id="backFromForgotPassword" class="flex-1 py-3 px-4 border border-gray-300 rounded-xl text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-custom-dark hover:bg-gray-50 dark:hover:bg-[#1f242c] transition-colors">
+                            بازگشت
+                        </button>
+                        <button type="button" id="requestPasswordReset" class="flex-1 py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors">
+                            دریافت کد تایید
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 6: Set New Password -->
+            <div class="form-step" id="step-6">
+                <form class="space-y-5">
+                    <div class="text-center mb-4">
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200 mb-2">تنظیم رمز عبور جدید</h3>
+                    </div>
+
+                    <div>
+                        <label for="newPassword" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">رمز عبور جدید</label>
+                        <div class="relative">
+                            <input type="password" autocomplete="newPassword" id="newPassword" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-custom-dark dark:text-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="رمز عبور جدید" required>
+                            <button type="button" class="absolute password-toggle top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500" onclick="togglePassword('newPassword', this)">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+
+                            </button>
+                        </div>
+
+                        <div class="mt-3 space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                            <div class="flex items-center" id="newLengthCondition"><span class="w-4 h-4 ms-2">○</span>حداقل 8 کاراکتر</div>
+                            <div class="flex items-center" id="newUppercaseCondition"><span class="w-4 h-4 ms-2">○</span>حرف بزرگ (A-Z)</div>
+                            <div class="flex items-center" id="newLowercaseCondition"><span class="w-4 h-4 ms-2">○</span>حرف کوچک (a-z)</div>
+                            <div class="flex items-center" id="newNumberCondition"><span class="w-4 h-4 ms-2">○</span>عدد (0-9)</div>
+                        </div>
+
+                        <p class="error-message text-sm text-red-600 mt-2 hidden" id="newPassword-error"></p>
+                    </div>
+
+                    <div>
+                        <label for="confirmPassword" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">تکرار رمز عبور جدید</label>
+                        <div class="relative">
+                            <input type="password" autocomplete="confirmPassword" id="confirmPassword" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-custom-dark dark:text-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="تکرار رمز عبور جدید" required>
+                            <button type="button" class="absolute password-toggle top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500" onclick="togglePassword('confirmPassword', this)">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="error-message text-sm text-red-600 mt-2 hidden" id="confirmPassword-error"></p>
+                    </div>
+
+                    <button type="button" id="resetPassword" class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors">
+                        تغییر رمز عبور و ورود
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- END MODAL LOGIN -->
+
+<!-- NAV MOBILE -->
+<nav id="navMenuMobile"
+     class="fixed lg:hidden block bottom-0 end-0 start-0 z-30 py-2 px-2 rounded-t-[30px] overflow-hidden bg-custom-light dark:bg-custom-dark before:content-[''] before:absolute before:top-0 before:right-0 before:w-full before:h-full before:opacity-30">
+    <div class="flex justify-around items-baseline relative text-white dark:text-gray-100">
+        <!-- Home -->
+        <a href="#" class="flex flex-col items-center px-2 py-3 rounded-[15px] transition-all duration-300 relative">
+            <div class="w-[50px] h-[50px] flex items-center justify-center rounded-full mb-1 bg-primary dark:bg-[rgba(255,255,255,0.05)] transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                          d="M4 19v-9q0-.475.213-.9t.587-.7l6-4.5q.525-.4 1.2-.4t1.2.4l6 4.5q.375.275.588.7T20 10v9q0 .825-.588 1.413T18 21h-3q-.425 0-.712-.288T14 20v-5q0-.425-.288-.712T13 14h-2q-.425 0-.712.288T10 15v5q0 .425-.288.713T9 21H6q-.825 0-1.412-.587T4 19"/>
+                </svg>
+            </div>
+        </a>
+
+        <!-- Search -->
+        <a href="#" class="flex flex-col items-center px-2 py-3 rounded-[15px] transition-all duration-300 relative">
+            <div class="w-[50px] h-[50px] flex items-center justify-center rounded-full mb-1 bg-primary dark:bg-[rgba(255,255,255,0.05)] transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                          d="m19.485 20.154l-6.262-6.262q-.75.639-1.725.989t-1.96.35q-2.402 0-4.066-1.663T3.808 9.503T5.47 5.436t4.064-1.667t4.068 1.664T15.268 9.5q0 1.042-.369 2.017t-.97 1.668l6.262 6.261z"/>
+                </svg>
+            </div>
+        </a>
+
+        <!--Central button-->
+        <div class="flex flex-col items-center relative">
+            <button onclick="scrollToTop(event)"
+                    class="w-[70px] h-[70px] bg-[linear-gradient(135deg,#D4AF37_0%,#F1C40F_100%)] dark:bg-[linear-gradient(135deg,#FFD700_0%,#B8860B_100%)] text-white rounded-full border-4 border-white/80 dark:border-gray-800 flex items-center justify-center mt-[-35px] shadow-[0_5px_20px_rgba(212,175,55,0.5)] active:scale-95 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M11 18V8.8l-3.6 3.6L6 11l6-6l6 6l-1.4 1.4L13 8.8V18z"/>
+                </svg>
+            </button>
+        </div>
+
+        <!--Shopping Cart-->
+        <a href="#" class="flex flex-col items-center px-2 py-3 rounded-[15px] transition-all duration-300 relative">
+            <div class="w-[50px] h-[50px] flex items-center justify-center rounded-full mb-1 bg-primary dark:bg-[rgba(255,255,255,0.05)] relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                          d="M22 9h-4.79l-4.39-6.57a1 1 0 0 0-1.66 0L6.77 9H2c-.55 0-1 .45-1 1c0 .09.01.18.04.27l2.54 9.27c.23.84 1 1.46 1.92 1.46h13c.92 0 1.69-.62 1.93-1.46l2.54-9.27L23 10c0-.55-.45-1-1-1M11.99 4.79L14.8 9H9.18zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2s2 .9 2 2s-.9 2-2 2"/>
+                </svg>
+                <span class="absolute top-[5px] end-[5px] bg-secondary text-white w-[20px] h-[20px] text-[12px] font-bold flex items-center justify-center rounded-full">۳</span>
+            </div>
+        </a>
+
+        <!-- Profile -->
+        <a href="#" class="flex flex-col items-center px-2 py-3 rounded-[15px] transition-all duration-300 relative">
+            <div class="w-[50px] h-[50px] flex items-center justify-center rounded-full mb-1 bg-primary dark:bg-[rgba(255,255,255,0.05)] transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                          d="M12 12q-1.65 0-2.825-1.175T8 8t1.175-2.825T12 4t2.825 1.175T16 8t-1.175 2.825T12 12m-8 8v-2.8q0-.85.438-1.562T5.6 14.55q1.55-.775 3.15-1.162T12 13t3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2V20z"/>
+                </svg>
+            </div>
+        </a>
+    </div>
+</nav>
+<!-- END MODAL LOGIN -->
+
+<!-- OVERLAY SHOW IN OFF CANVAS -->
+<div class="overlay fixed inset-0 z-40 bg-black/70 hidden transition-opacity duration-300"
+     onclick="closeOffcanvas()" role="presentation" aria-hidden="true"></div>
+<!-- OVERLAY SHOW IN OFF CANVAS -->
+
+<script src="{% static 'assets/js/plugin/story-player/story-player.js' %}"></script>
+<script src="{% static 'assets/js/plugin/swiper/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'assets/js/dependencies/swiper-script.js' %}"></script>
+<script src="{% static 'assets/js/dependencies/auth.js' %}"></script>
+<script src="{% static 'assets/js/dependencies/app.js' %}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const banner = document.getElementById('top-banner');
+        const closeBtn = document.getElementById('close-banner');
+
+        if (banner && closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                banner.style.display = 'none';
+                // ذخیره در localStorage برای جلوگیری از نمایش مجدد در همین session
+                localStorage.setItem('bannerClosed', 'true');
+            });
+
+            // بررسی اگر کاربر قبلاً بنر را بسته است
+            if (localStorage.getItem('bannerClosed') === 'true') {
+                banner.style.display = 'none';
+            }
+        }
+    });
+</script>
+<!-- INITIAL STORY SECTION -->
+<script>
+
+    const stories = [
+        {
+            type: 'image',
+            user: 'استوری ۱',
+            avatar: 'assets/images/story/1.jpg',
+            url: 'assets/images/story/1.jpg',
+            duration: 5000,
+            link: 'https://www.rtl-theme.com/author/amir_rezaii/products/'
+        },
+        {
+            type: 'image',
+            user: 'استوری 2',
+            avatar: 'assets/images/story/2.jpg',
+            url: 'assets/images/story/2.jpg',
+            duration: 5000,
+            link: 'https://www.rtl-theme.com/author/amir_rezaii/products/'
+        },
+        {
+            type: 'image',
+            user: 'استوری 3',
+            avatar: 'assets/images/story/3.jpg',
+            url: 'assets/images/story/3.jpg',
+            duration: 5000,
+            link: 'https://www.rtl-theme.com/author/amir_rezaii/products/'
+        },
+        {
+            type: 'image',
+            user: 'استوری 4',
+            avatar: 'assets/images/story/5.jpg',
+            url: 'assets/images/story/5.jpg',
+            duration: 5000,
+            link: './assets\img\cover/cover1.png'
+        },
+        {
+            type: 'image',
+            user: 'استوری 5',
+            avatar: 'assets/images/story/6.jpg',
+            url: 'assets/images/story/6.jpg',
+            duration: 5000,
+            link: 'https://www.rtl-theme.com/author/amir_rezaii/products/'
+        },
+        {
+            type: 'image',
+            user: 'استوری 6',
+            avatar: 'assets/images/story/7.jpg',
+            url: 'assets/images/story/7.jpg',
+            duration: 5000,
+            link: 'https://www.rtl-theme.com/author/amir_rezaii/products/'
+        },
+        {
+            type: 'image',
+            user: 'استوری 7',
+            avatar: 'assets/images/story/8.jpg',
+            url: 'assets/images/story/8.jpg',
+            duration: 5000,
+            link: 'https://www.rtl-theme.com/author/amir_rezaii/products/'
+        },
+        {
+            type: 'video',
+            user: 'استوری 8',
+            avatar: 'assets/images/story/4.jpg',
+            url: 'assets/images/story/video/1.mp4',
+            duration: null,
+            link: 'https://www.rtl-theme.com/author/amir_rezaii/products/'
+        },
+        {
+            type: 'image',
+            user: 'استوری ۱',
+            avatar: 'assets/images/story/1.jpg',
+            url: 'assets/images/story/1.jpg',
+            duration: 5000,
+            link: 'https://www.rtl-theme.com/author/amir_rezaii/products/'
+        },
+        {
+            type: 'image',
+            user: 'استوری 2',
+            avatar: 'assets/images/story/2.jpg',
+            url: 'assets/images/story/2.jpg',
+            duration: 5000,
+            link: 'https://www.rtl-theme.com/author/amir_rezaii/products/'
+        },
+        {
+            type: 'image',
+            user: 'استوری 3',
+            avatar: 'assets/images/story/3.jpg',
+            url: 'assets/images/story/3.jpg',
+            duration: 5000,
+            link: 'https://www.rtl-theme.com/author/amir_rezaii/products/'
+        },
+        {
+            type: 'image',
+            user: 'استوری 4',
+            avatar: 'assets/images/story/5.jpg',
+            url: 'assets/images/story/5.jpg',
+            duration: 5000,
+            link: 'https://www.rtl-theme.com/author/amir_rezaii/products/'
+        },
+        {
+            type: 'image',
+            user: 'استوری 5',
+            avatar: 'assets/images/story/6.jpg',
+            url: 'assets/images/story/6.jpg',
+            duration: 5000,
+            link: 'https://www.rtl-theme.com/author/amir_rezaii/products/'
+        },
+    ];
+
+    new StoryPlayer('stories-container', stories);
+</script>
+{% endblock %}
