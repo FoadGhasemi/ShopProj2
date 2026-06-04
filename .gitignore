@@ -1,0 +1,39 @@
+# Django #
+*.log
+*.pot
+*.pyc
+pycache/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# If using Django static files
+/staticfiles/
+/static/
+/assets/
+
+# Media
+/media/
+
+# Environments
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# IDEs
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+
+# Python
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+.eggs/
+dist/
+build/
