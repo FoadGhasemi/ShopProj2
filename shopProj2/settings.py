@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     # my_apps
     'product',
     'home',
+    # my_packages
+    'admin_persian'
 ]
 
 MIDDLEWARE = [
@@ -113,7 +115,7 @@ MEDIA_URL = '/media/'
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa-ir'
 
 TIME_ZONE = 'UTC'
 
