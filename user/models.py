@@ -9,6 +9,7 @@ class User(AbstractBaseUser):
         verbose_name="آدرس ایمیل",
         max_length=255,
         unique=True,
+        null=True,
     )
     fullname = models.CharField(max_length=50, verbose_name="نام کامل")
     phone = PhoneNumberField(unique=True, region="IR", verbose_name="شماره تلفن")

@@ -1,0 +1,279 @@
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-Thin.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 100;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-ThinItalic.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-ExtraLight.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 200;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-ExtraLightItalic.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-Light.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-LightItalic.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-Regular.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-Italic.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-Medium.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-MediumItalic.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-SemiBold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-SemiBoldItalic.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-Bold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-BoldItalic.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-ExtraBold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 800;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-ExtraBoldItalic.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-Black.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url("../assets/fonts/inter/Inter-BlackItalic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "payda";
+    src: url("../assets/fonts/payda/PeydaWebFaNum-Medium.woff2") format("woff2");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "payda";
+    src: url("../assets/fonts/payda/PeydaWebFaNum-Bold.woff2") format('woff2');
+    font-weight: bold;
+}
+@font-face {
+    font-family: "payda";
+    src: url("../assets/fonts/payda/PeydaWebFaNum-Black.woff2") format('woff2');
+    font-weight: 900;
+}
+/* ================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "payda", "Inter", Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.register-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 450px;
+    max-width: 90%;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(149, 76, 233, 0.3);
+}
+
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #0040ff;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #9c4dff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(156, 77, 255, 0.2);
+}
+
+.terms-conditions {
+    margin: 20px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.terms-conditions input {
+    margin-left: 5px;
+    accent-color: #00fbff;
+}
+
+.terms-conditions a {
+    color: #1846ff;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.terms-conditions a:hover {
+    color: #10f3ff;
+    text-decoration: underline;
+}
+
+.register-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, rgb(28, 21, 239) 0%, #1c60ff 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.register-button:hover {
+    background: linear-gradient(135deg, #3dfff2 0%, #1ce1ff 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.register-button:active {
+    transform: translateY(0);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.login-link a {
+    color: #4737f8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.login-link a:hover {
+    color: #0439f8;
+    text-decoration: underline;
+}

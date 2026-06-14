@@ -4,11 +4,13 @@
     <title>{% block title %} {% endblock %}</title>
     {% include 'includes/header_reference.html' %}
     {% include 'includes/header.html' %}
+    {% block extra_head %}{% endblock %}
 </head>
 <body class="relative bg-custom-light dark:bg-[#0d1117] text-gray-900 dark:text-gray-100 transition-colors duration-300" >
 {% block content %}
 {% endblock %}
 
+{% block extra_scripts %}{% endblock %}
 {% include 'includes/footer.html' %}
 
 </body>

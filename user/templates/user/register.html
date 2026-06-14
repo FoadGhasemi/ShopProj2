@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم ثبت نام</title>
+    <link rel="stylesheet" href="{% static 'user/css/register_styles.css' %}">
+</head>
+<body>
+    <video autoplay muted loop class="video-background">
+        <source src="{% static 'user/videos/back.mp4' %}" type="video/mp4">
+    </video>
+
+    <div class="register-container">
+        <h2>ایجاد حساب کاربری</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.none_field_errors }}
+            <div class="input-group">
+                {{ form.fullname.label_tag }}
+                {{ form.fullname }}
+                {{ form.fullname.errors }}
+            </div>
+            <div class="input-group">
+                {{ form.phone.label_tag }}
+                {{ form.phone }}
+                {% for error in form.phone.errors %}
+                <p class="alert alert-danger">
+                    {{ error }}
+                </p>
+                {% endfor %}
+            </div>
+            <div class="input-group">
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+                {{ form.password1.errors }}
+            </div>
+            <div class="input-group">
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+                {{ form.password2.errors }}
+            </div>
+            <div class="terms-conditions">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">با <a href="#">شرایط و قوانین</a> موافقم</label>
+            </div>
+            <button type="submit" class="register-button">ثبت نام</button>
+            <div class="login-link">
+                قبلاً ثبت نام کرده‌اید؟ <a href="login.html">وارد شوید</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
